@@ -1,0 +1,9 @@
+CHANGE LOG
+==========
+
+Record lab setup changes, baseline checks, test activities, and remediation.
+Do not include credentials, tokens, or personal data.
+
+| Date | System / area | Change or observation | Result | Evidence | Operator |
+|------|---------------|-----------------------|--------|----------|----------|
+|      |               |                       |        |          |          |

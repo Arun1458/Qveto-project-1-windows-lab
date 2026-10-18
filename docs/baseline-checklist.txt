@@ -1,0 +1,29 @@
+WINDOWS LAB BASELINE CHECKLIST
+==============================
+
+Lab name:
+Assessment date:
+Assessor:
+Windows version/build:
+
+Use one result per item: NOT CHECKED / PASS / FAIL / NOT APPLICABLE.
+Record evidence filenames and remediation notes without including secrets.
+
+[ ] Lab is isolated from production and untrusted networks.
+[ ] Scope and authorization are documented in rules-of-engagement.txt.
+[ ] VM inventory and assigned addresses are current.
+[ ] Windows is supported and required security updates are installed.
+[ ] Defender/endpoint protection status is documented.
+[ ] Firewall is enabled for applicable network profiles.
+[ ] Remote access is limited to authorized lab users and systems.
+[ ] Local accounts and administrative group membership are reviewed.
+[ ] Password and account-lockout policies are documented.
+[ ] UAC and security auditing settings are reviewed.
+[ ] Unneeded services, features, and network shares are disabled.
+[ ] Restore point or clean VM snapshot is available before testing.
+[ ] Test results and remediation actions are recorded in change-log.txt.
+[ ] Evidence is sanitized and contains no credentials or personal data.
+
+Findings / exceptions:
+
+Remediation owner and due date:

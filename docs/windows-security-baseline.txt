@@ -1,0 +1,27 @@
+WINDOWS SECURITY BASELINE
+=========================
+
+System:
+Windows edition/build:
+Date checked:
+Operator:
+
+Record the intended setting, observed state, result, and evidence reference.
+Applicable organizational policy and supported Windows version take precedence.
+
+| Area | Baseline / expected state | Observed state | Result | Evidence / notes |
+|------|---------------------------|----------------|--------|------------------|
+| Updates | Supported OS; security updates applied | | | |
+| Microsoft Defender | Protection enabled and current, as applicable | | | |
+| Windows Firewall | Enabled for applicable profiles | | | |
+| User accounts | Only authorized accounts retained | | | |
+| Administrators | Membership reviewed and minimized | | | |
+| UAC | Enabled with an appropriate prompt policy | | | |
+| Password policy | Meets the documented lab/organizational policy | | | |
+| Account lockout | Configured according to documented policy | | | |
+| Auditing | Relevant security events are recorded | | | |
+| Remote access | Disabled or restricted to approved lab access | | | |
+| Services/features | Unneeded components disabled | | | |
+| Sharing | Unneeded shares removed; remaining access restricted | | | |
+
+Exceptions and remediation:

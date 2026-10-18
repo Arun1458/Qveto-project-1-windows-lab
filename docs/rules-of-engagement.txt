@@ -1,0 +1,36 @@
+RULES OF ENGAGEMENT
+===================
+
+Authorization and scope
+-----------------------
+- Testing is limited to virtual machines and networks explicitly owned or
+  authorized by the lab operator.
+- Record approved systems, addresses, dates, and activities before testing.
+- Do not target production, public, or third-party systems.
+
+Safety controls
+---------------
+- Keep lab networks isolated from production and the public internet unless
+  connectivity is specifically required and safely controlled.
+- Do not use real credentials or store secrets in this project.
+- Avoid destructive actions and preserve a clean snapshot for recovery.
+- Stop immediately if activity affects a system outside the documented scope.
+
+Data handling
+-------------
+- Collect only data required to demonstrate a configuration or result.
+- Sanitize screenshots, logs, hostnames, and addresses before sharing.
+- Store approved artifacts in evidence/; do not include passwords, tokens,
+  private keys, or personal data.
+
+Reporting
+---------
+- Record test dates, affected lab systems, observations, evidence references,
+  and remediation in change-log.txt.
+- Document exceptions and obtain renewed authorization before expanding scope.
+
+Operator:
+Authorization reference:
+Approved scope:
+Approval date:
+Review / expiry date:

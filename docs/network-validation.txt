@@ -1,0 +1,28 @@
+NETWORK VALIDATION
+==================
+
+Purpose
+-------
+Record checks confirming that the lab network is limited to the authorized
+systems and remains separated from production and other untrusted networks.
+
+Validation record
+-----------------
+Date:
+Operator:
+Hypervisor / host:
+Virtual network:
+Expected lab members:
+Expected external connectivity:
+
+Checks
+------
+| Check | Expected result | Observed result | PASS/FAIL | Evidence |
+|-------|-----------------|-----------------|-----------|----------|
+| VM adapters use the documented lab network | | | | |
+| Only inventoried systems are attached | | | | |
+| Production networks are not bridged | | | | |
+| Routing and outbound access match the approved design | | | | |
+| Firewall profiles and rules match the intended policy | | | | |
+
+Issues and corrective actions:

@@ -1,0 +1,36 @@
+LAB DESIGN
+==========
+
+Purpose
+-------
+Describe the authorized Windows security configuration and defensive
+validation lab. Keep experiments isolated and use snapshots to restore systems.
+
+Objectives
+----------
+- Document the intended lab topology and system roles.
+- Validate Windows security settings against the project baseline.
+- Record observations and remediation without exposing sensitive data.
+
+Environment
+-----------
+Hypervisor:
+Host operating system:
+Virtual network mode:
+Network boundary / isolation notes:
+
+Systems and roles
+-----------------
+List each VM, its role, Windows edition/build, and snapshot name in
+vm-inventory.txt. Do not include passwords, tokens, or private keys.
+
+Testing approach
+----------------
+Define the specific configuration checks, expected outcomes, and evidence to
+collect before each exercise. Use only authorized lab systems. Avoid testing
+against external, production, or third-party systems.
+
+Recovery and cleanup
+--------------------
+Take a clean snapshot before changes. Revert or rebuild systems after an
+exercise, remove temporary test accounts and files, and update change-log.txt.

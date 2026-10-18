@@ -1,0 +1,14 @@
+VIRTUAL MACHINE INVENTORY
+=========================
+
+Keep this inventory current. Do not record credentials, license keys, or
+personal data here.
+
+| VM name | Role | OS / edition / build | Network / IP | Snapshot | Owner | Notes |
+|---------|------|----------------------|--------------|----------|-------|-------|
+|         |      |                      |              |          |       |       |
+
+Host / hypervisor:
+Virtual network name and mode:
+Isolation verified on:
+Verified by:
