@@ -1,18 +1,25 @@
-# Week 1 Deliverable: Application & Baseline Configuration Inventory (M3)
+# Week 1 Deliverable: VM & Baseline Configuration Inventory (M3)
 
-## 1. Operating System & Patch State Baseline
-| Target Hostname | OS Version & Build | Architecture | Installed Hotfixes (KB) | Patch Status |
-|-----------------|--------------------|--------------|-------------------------|--------------|
-| WIN-LAB-TARGET  | Windows 10/11 Pro  | x64          | Pending `wmic qfe` scan | Baseline     |
+## 1. Confirmed Virtual Machine Specifications (From Lab Setup)
+* **VM Name:** `windows11-lab`
+* **Operating System:** Windows 11 (64-bit)
+* **Base Memory (RAM):** 4096 MB (4 GB)
+* **Processors:** 3 vCPUs
+* **Boot Order:** Hard Disk, Optical, Floppy
+* **Platform Security Features:**
+  * **TPM Type:** 2.0
+  * **EFI:** Enabled
+  * **Secure Boot:** Enabled
+  * **Hardware Virtualization:** VT-x/AMD-V, Nested Paging, Hyper-V Paravirtualization
+* **Distribution Method:** Standardized team `.ova` appliance image for reproducible assessment across all team roles.
 
-## 2. Installed Applications Inventory
-| Application Name | Version | Vendor | Install Path | Service Account | Known CVE / Config Note |
-|------------------|---------|--------|--------------|-----------------|-------------------------|
-| Approved Lab App | TBD     | TBD    | `C:\Program Files\...` | LocalSystem | Check service binary ACLs |
+## 2. Operating System & Patch State Baseline
+| Target VM Name | OS Version & Build | Architecture | Installed Hotfixes (KB) | Patch Status |
+|----------------|--------------------|--------------|-------------------------|--------------|
+| `windows11-lab` | Windows 11 (64-bit) | x64 | Pending `.ova` import & `systeminfo` check | Baseline |
 
-## 3. Baseline Security Settings & Privileges
-* **Windows Defender Status:** Real-time protection state to be recorded prior to testing.
-* **UAC Configuration:** `ConsentPromptBehaviorAdmin` registry value baseline.
-* **Service Path Hygiene:** Check for unquoted service paths with spaces running as `SYSTEM`.
-* **Folder/Registry Permissions:** Check `icacls` on non-default service directories and `AlwaysInstallElevated` registry keys.
-* **Telemetry Readiness:** Confirm Event Viewer, Sysmon, and Process Monitor logging with M5.
+## 3. Baseline Security Settings & Audit Scope (M3)
+* **Windows Defender Status:** Real-time protection and tamper protection baseline to be verified upon `.ova` import.
+* **UAC Configuration:** `EnableLUA` and `ConsentPromptBehaviorAdmin` registry baseline.
+* **Service Path Hygiene:** Audit non-default services for unquoted service paths running as `LocalSystem`.
+* **Directory/Binary ACLs:** Inspect `icacls` permissions on third-party application directories.
