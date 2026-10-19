@@ -1,9 +1,43 @@
-CHANGE LOG
-==========
+# Week 1 — Change Log
 
-Record lab setup changes, baseline checks, test activities, and remediation.
-Do not include credentials, tokens, or personal data.
+Project: Windows Exploitation & Privilege Escalation Lab
+Prepared by: dhruv-sain-hub
 
-| Date | System / area | Change or observation | Result | Evidence | Operator |
-|------|---------------|-----------------------|--------|----------|----------|
-|      |               |                       |        |          |          |
+## Entry 1 — Windows VM Setup
+
+- Date: 18-10-2026
+- Component: Windows 11 VM
+- VM name: windows11-lab
+- Configuration recorded: 3 vCPUs, 4096 MB RAM, 80.00 GB virtual disk
+- Snapshot recorded: windows11-clean-install
+- Outcome: Windows VM boots successfully.
+
+## Entry 2 — Kali VM Setup
+
+- Date: 18-10-2026
+- Component: Kali Linux VM
+- VM name: kali-linux-2026.2-virtualbox-amd64
+- Configuration recorded: 2 vCPUs, 2048 MB RAM, 80.09 GB virtual disk
+- Snapshot recorded: kali-clean-install
+- Outcome: Kali VM boots successfully.
+
+## Entry 3 — Internal Network Configuration
+
+- Date: 18-10-2026
+- Components: Windows and Kali VMs
+- Change: Configured Adapter 1 on both VMs to use Internal Network LabNet.
+- Windows IPv4: 10.10.10.20/24
+- Kali IPv4: 10.10.10.10/24
+- Outcome: Both VMs use the intended lab network.
+
+## Entry 4 — Network Connectivity Troubleshooting
+
+- Date: 18-10-2026
+- Components: Kali Linux, Windows 11, Windows Firewall
+- Issue: Initial Kali-to-Windows ping failed.
+- Finding: The relevant Windows inbound ICMPv4 Echo Request rule was disabled.
+- Action: Enabled the specific inbound ping rule.
+- Outcome: Windows-to-Kali and Kali-to-Windows ping tests succeeded with 0% packet loss.
+- Security note: Windows Firewall remained enabled.
+
+End of change log.

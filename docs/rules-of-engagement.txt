@@ -1,36 +1,72 @@
-RULES OF ENGAGEMENT
-===================
+# Rules of Engagement — Week 1
 
-Authorization and scope
------------------------
-- Testing is limited to virtual machines and networks explicitly owned or
-  authorized by the lab operator.
-- Record approved systems, addresses, dates, and activities before testing.
-- Do not target production, public, or third-party systems.
+Project: Windows Exploitation & Privilege Escalation Lab  
+Date: 18-10-2026  
+Prepared by: dhruv-sain-hub
 
-Safety controls
----------------
-- Keep lab networks isolated from production and the public internet unless
-  connectivity is specifically required and safely controlled.
-- Do not use real credentials or store secrets in this project.
-- Avoid destructive actions and preserve a clean snapshot for recovery.
-- Stop immediately if activity affects a system outside the documented scope.
+## 1. Purpose
 
-Data handling
--------------
-- Collect only data required to demonstrate a configuration or result.
-- Sanitize screenshots, logs, hostnames, and addresses before sharing.
-- Store approved artifacts in evidence/; do not include passwords, tokens,
-  private keys, or personal data.
+Establish the scope and safety requirements for the virtualization and network isolation phase of the project.
 
-Reporting
----------
-- Record test dates, affected lab systems, observations, evidence references,
-  and remediation in change-log.txt.
-- Document exceptions and obtain renewed authorization before expanding scope.
+## 2. Authorized Systems
 
-Operator:
-Authorization reference:
-Approved scope:
-Approval date:
-Review / expiry date:
+Only the following VMs are in scope:
+
+### Windows 11 Target
+
+- VM name: windows11-lab
+- IPv4 address: 10.10.10.20/24
+- Role: Lab target
+
+### Kali Linux Testing VM
+
+- VM name: kali-linux-2026.2-virtualbox-amd64
+- IPv4 address: 10.10.10.10/24
+- Role: Testing and network verification
+
+## 3. Authorized Activities
+
+- Inspecting VirtualBox VM settings.
+- Recording CPU, RAM, and virtual disk capacity.
+- Configuring the Internal Network LabNet.
+- Verifying IP addressing and routes.
+- Testing ICMP connectivity between the two authorized VMs.
+- Reviewing network adapter and isolation settings.
+- Creating and verifying recovery snapshots.
+- Capturing sanitized configuration evidence.
+
+## 4. Prohibited Activities
+
+- Testing systems outside the authorized lab.
+- Scanning public IP addresses or unrelated devices.
+- Accessing systems without explicit authorization.
+- Connecting the lab to external networks without reviewing and approving the change.
+- Disabling host security controls.
+- Uploading VM disks, installation ISOs, passwords, private keys, or access tokens to GitHub.
+
+## 5. Network Requirements
+
+- Both VMs must use Internal Network LabNet for the lab.
+- Bridged networking is not intended.
+- Additional network adapters require review before use.
+- The lab interfaces should not have a default gateway or DNS configuration unless the approved design changes.
+- Firewall protections must remain enabled.
+- Only the specific inbound rule required for the authorized ping test was enabled.
+
+## 6. Recovery and Documentation
+
+- Verify baseline snapshots before higher-risk changes.
+- Record all configuration changes.
+- Document unexpected behavior and recovery steps.
+- Remove sensitive information from screenshots before sharing.
+- Commit documentation to the designated feature branch.
+
+## 7. Scope Changes
+
+Any change to the authorized VMs, network configuration, or permitted activities must be reviewed and documented before proceeding.
+
+## 8. Completion Criteria
+
+Week 1 is ready for review when the VM inventory, network design, connectivity results, isolation review, and required evidence are documented.
+
+End of rules of engagement.

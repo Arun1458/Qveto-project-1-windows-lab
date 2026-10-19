@@ -1,14 +1,93 @@
-VIRTUAL MACHINE INVENTORY
-=========================
+# Week 1 — Virtual Machine Inventory
 
-Keep this inventory current. Do not record credentials, license keys, or
-personal data here.
+Project: Windows Exploitation & Privilege Escalation Lab
+Date: 18-10-2026
+Prepared by: dhruv-sain-hub
 
-| VM name | Role | OS / edition / build | Network / IP | Snapshot | Owner | Notes |
-|---------|------|----------------------|--------------|----------|-------|-------|
-|         |      |                      |              |          |       |       |
+## 1. Virtualization Environment
 
-Host / hypervisor:
-Virtual network name and mode:
-Isolation verified on:
-Verified by:
+- Virtualization software: Oracle VirtualBox 7.2.20
+- Host operating system: Windows; exact version pending
+- Virtual network type: Internal Network
+- Internal network name: LabNet
+- IPv4 subnet: 10.10.10.0/24
+
+## 2. Windows 11 Target VM
+
+- VM name: windows11-lab
+- Operating system: Windows 11
+- Status: Boots successfully
+- CPU allocation: 3 vCPUs
+- RAM allocation: 4096 MB
+- Virtual disk capacity: 80.00 GB
+- Adapter 1: Internal Network
+- Network name: LabNet
+- IPv4 address: 10.10.10.20/24
+- Intended default gateway: None
+- Intended DNS: None
+- Snapshot name: windows11-clean-install
+- Defender status: Pending
+- Firewall profile status: Pending
+- Windows Update status: Pending
+
+## 3. Kali Linux Testing VM
+
+- VM name: kali-linux-2026.2-virtualbox-amd64
+- Operating system: Kali Linux
+- Status: Boots successfully
+- CPU allocation: 2 vCPUs
+- RAM allocation: 2048 MB
+- Virtual disk capacity: 80.09 GB
+- Adapter 1: Internal Network
+- Network name: LabNet
+- Network interface: eth0
+- IPv4 address: 10.10.10.10/24
+- Intended default gateway: None
+- Intended DNS: None
+- Snapshot name: kali-clean-install
+
+## 4. Network Inventory
+
+| Property        | Value            |
+| --------------- | ---------------- |
+| Network name    | LabNet           |
+| Attachment type | Internal Network |
+| Subnet          | 10.10.10.0/24    |
+| Windows address | 10.10.10.20/24   |
+| Kali address    | 10.10.10.10/24   |
+| DHCP            | Not configured   |
+| Default gateway | None intended    |
+| DNS             | None intended    |
+
+## 5. Snapshot Inventory
+
+### Windows 11
+
+- Snapshot: windows11-clean-install
+- Purpose: Clean installation recovery point
+- Recorded date: 18-10-2026
+- Availability: Recorded; verify in VirtualBox before restoration
+
+### Kali Linux
+
+- Snapshot: kali-clean-install
+- Purpose: Baseline recovery point
+- Recorded date: 17-10-2026
+- Availability: Recorded; verify in VirtualBox before restoration
+
+## 6. Verification Status
+
+- [x] VM names and resource allocations recorded
+- [x] Network name recorded for both VMs
+- [x] IPv4 addresses recorded
+- [x] Snapshot names recorded
+- [x] Bidirectional ping tests successful
+- [x] All network adapters reviewed
+- [x] Kali address persistence after restart confirmed
+- [x] Windows security baseline recorded
+
+## 7. Notes
+
+Update this inventory whenever VM resources, network adapters, addresses, or snapshots change. Do not record passwords or other secrets.
+
+End of inventory.

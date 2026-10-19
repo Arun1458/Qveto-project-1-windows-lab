@@ -1,36 +1,93 @@
-LAB DESIGN
-==========
+# Lab Design — Virtualization and Network Isolation
 
-Purpose
--------
-Describe the authorized Windows security configuration and defensive
-validation lab. Keep experiments isolated and use snapshots to restore systems.
+Project: Windows Exploitation & Privilege Escalation Lab  
+Date: 18-10-2026  
+Prepared by: dhruv-sain-hub
 
-Objectives
-----------
-- Document the intended lab topology and system roles.
-- Validate Windows security settings against the project baseline.
-- Record observations and remediation without exposing sensitive data.
+## 1. Purpose
 
-Environment
------------
-Hypervisor:
-Host operating system:
-Virtual network mode:
-Network boundary / isolation notes:
+Document the architecture of the Week 1 virtual lab and explain how the two virtual machines communicate over a dedicated internal virtual network.
 
-Systems and roles
------------------
-List each VM, its role, Windows edition/build, and snapshot name in
-vm-inventory.txt. Do not include passwords, tokens, or private keys.
+## 2. Virtualization Platform
 
-Testing approach
-----------------
-Define the specific configuration checks, expected outcomes, and evidence to
-collect before each exercise. Use only authorized lab systems. Avoid testing
-against external, production, or third-party systems.
+- Software: Oracle VirtualBox
+- Version: 7.2.20
+- Host operating system: Windows; exact version pending
+- Virtual machines: Windows 11 and Kali Linux
 
-Recovery and cleanup
---------------------
-Take a clean snapshot before changes. Revert or rebuild systems after an
-exercise, remove temporary test accounts and files, and update change-log.txt.
+## 3. Architecture
+
+```text
+Host Computer
+└── Oracle VirtualBox
+    ├── Windows 11 VM
+    │   ├── Name: windows11-lab
+    │   ├── IP: 10.10.10.20/24
+    │   └── Role: Authorized lab target
+    │
+    └── Kali Linux VM
+        ├── Name: kali-linux-2026.2-virtualbox-amd64
+        ├── Interface: eth0
+        ├── IP: 10.10.10.10/24
+        └── Role: Testing and verification
+
+Virtual network connecting the VMs:
+Internal Network — LabNet
+Subnet: 10.10.10.0/24
+```
+
+## 4. VM Resources
+
+### Windows 11 VM
+
+- CPU: 3 vCPUs
+- RAM: 4096 MB
+- Virtual disk capacity: 80.00 GB
+- Snapshot: windows11-clean-install
+
+### Kali Linux VM
+
+- CPU: 2 vCPUs
+- RAM: 2048 MB
+- Virtual disk capacity: 80.09 GB
+- Snapshot: kali-clean-install
+
+## 5. Network Addressing
+
+| Component | Address or setting |
+|---|---|
+| Subnet | 10.10.10.0/24 |
+| Windows | 10.10.10.20/24 |
+| Kali | 10.10.10.10/24 |
+| Network attachment | Internal Network |
+| Network name | LabNet |
+| Default gateway | None intended |
+| DNS | None intended |
+| DHCP | Not configured |
+
+## 6. Isolation Design
+
+Both virtual machines are configured to use the same VirtualBox Internal Network. Bridged networking is not part of the intended design.
+
+The lab should not be considered fully isolated until all enabled adapters, routing configuration, and relevant host/guest networking settings have been reviewed.
+
+## 7. Validation
+
+- Windows-to-Kali ping: Successful, 0% packet loss.
+- Kali-to-Windows ping: Successful, 0% packet loss after enabling the relevant Windows inbound ICMPv4 Echo Request rule.
+- Full adapter and route review: Pending confirmation.
+
+## 8. Recovery
+
+The recorded baseline snapshots are:
+
+- windows11-clean-install
+- kali-clean-install
+
+Verify snapshot availability before making significant changes.
+
+## 9. Conclusion
+
+The lab architecture consists of two virtual machines communicating over the Internal Network LabNet. The configured addresses and successful ping tests demonstrate bidirectional ICMP connectivity. Isolation review remains a separate verification requirement.
+
+End of lab design.

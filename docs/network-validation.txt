@@ -1,28 +1,61 @@
-NETWORK VALIDATION
-==================
+# Week 1 — Network Validation Report
 
-Purpose
--------
-Record checks confirming that the lab network is limited to the authorized
-systems and remains separated from production and other untrusted networks.
+Project: Windows Exploitation & Privilege Escalation Lab
+Date: 18-10-2026
+Prepared by: dhruv-sain-hub
 
-Validation record
------------------
-Date:
-Operator:
-Hypervisor / host:
-Virtual network:
-Expected lab members:
-Expected external connectivity:
+## 1. Objective
 
-Checks
-------
-| Check | Expected result | Observed result | PASS/FAIL | Evidence |
-|-------|-----------------|-----------------|-----------|----------|
-| VM adapters use the documented lab network | | | | |
-| Only inventoried systems are attached | | | | |
-| Production networks are not bridged | | | | |
-| Routing and outbound access match the approved design | | | | |
-| Firewall profiles and rules match the intended policy | | | | |
+Verify IPv4 connectivity between the Windows 11 and Kali Linux VMs over the Internal Network LabNet.
 
-Issues and corrective actions:
+## 2. Expected Configuration
+
+- Network: LabNet
+- Subnet: 10.10.10.0/24
+- Windows: 10.10.10.20/24
+- Kali: 10.10.10.10/24
+
+## 3. Initial Troubleshooting
+
+The initial ping from Kali to Windows failed. During troubleshooting, the relevant Windows inbound ICMPv4 Echo Request rule was found to be disabled.
+
+The rule was enabled for the lab ping test. Windows Firewall was not intentionally disabled.
+
+## 4. Test Results
+
+### Test A — Windows to Kali
+
+- Source: 10.10.10.20
+- Destination: 10.10.10.10
+- Command: `ping 10.10.10.10`
+- Result: Successful
+- Packet loss: 0%
+
+### Test B — Kali to Windows
+
+- Source: 10.10.10.10
+- Destination: 10.10.10.20
+- Command: `ping -c 4 10.10.10.20`
+- Result after rule change: Successful
+- Packet loss: 0%
+
+## 5. Conclusion
+
+Bidirectional ICMP connectivity was verified between the two VMs.
+
+This confirms that ICMP echo traffic can pass in both directions. It does not independently confirm that every network service is reachable or that the environment has complete isolation.
+
+## 6. Isolation Review
+
+- [x] Both VMs configured for Internal Network LabNet
+- [x] Both VMs have recorded IPv4 addresses on the same subnet
+
+## 7. Evidence Checklist
+
+- [x] Windows `ipconfig` output
+- [x] Kali `ip -4 addr show eth0` output
+- [x] Successful Windows-to-Kali ping
+- [x] Successful Kali-to-Windows ping
+- [x] Windows and Kali adapter settings
+
+End of report.

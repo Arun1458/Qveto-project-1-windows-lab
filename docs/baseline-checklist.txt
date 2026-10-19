@@ -1,29 +1,64 @@
-WINDOWS LAB BASELINE CHECKLIST
-==============================
+# Week 1 — Virtualization and Network Isolation Checklist
 
-Lab name:
-Assessment date:
-Assessor:
-Windows version/build:
+Project: Windows Exploitation & Privilege Escalation Lab
+Date: 18-10-2026
+Prepared by: dhruv-sain-hub
 
-Use one result per item: NOT CHECKED / PASS / FAIL / NOT APPLICABLE.
-Record evidence filenames and remediation notes without including secrets.
+## 1. Virtualization Environment
 
-[ ] Lab is isolated from production and untrusted networks.
-[ ] Scope and authorization are documented in rules-of-engagement.txt.
-[ ] VM inventory and assigned addresses are current.
-[ ] Windows is supported and required security updates are installed.
-[ ] Defender/endpoint protection status is documented.
-[ ] Firewall is enabled for applicable network profiles.
-[ ] Remote access is limited to authorized lab users and systems.
-[ ] Local accounts and administrative group membership are reviewed.
-[ ] Password and account-lockout policies are documented.
-[ ] UAC and security auditing settings are reviewed.
-[ ] Unneeded services, features, and network shares are disabled.
-[ ] Restore point or clean VM snapshot is available before testing.
-[ ] Test results and remediation actions are recorded in change-log.txt.
-[ ] Evidence is sanitized and contains no credentials or personal data.
+- [x] Oracle VirtualBox installed
+- [x] Windows 11 VM created
+- [x] Kali Linux VM created
+- [x] Windows VM boots successfully
+- [x] Kali VM boots successfully
+- [x] Windows baseline snapshot recorded
+- [x] Kali baseline snapshot recorded
 
-Findings / exceptions:
+## 2. Windows VM
 
-Remediation owner and due date:
+- [x] VM name recorded: windows11-lab
+- [x] CPU allocation recorded: 3
+- [x] RAM allocation recorded: 4096 MB
+- [x] Virtual disk capacity recorded: 80.00 GB
+- [x] IPv4 address configured: 10.10.10.20/24
+- [x] Windows snapshot name recorded: windows11-clean-install
+- [x] Windows OS version/build recorded
+- [x] Windows security baseline recorded
+
+## 3. Kali VM
+
+- [x] VM name recorded: kali-linux-2026.2-virtualbox-amd64
+- [x] CPU allocation recorded: 2
+- [x] RAM allocation recorded: 2048 MB
+- [x] Virtual disk capacity recorded: 80.09 GB
+- [x] Interface eth0 configured
+- [x] Lab IPv4 address assigned: 10.10.10.10/24
+- [x] Kali snapshot name recorded: kali-clean-install
+- [x] Kali OS version recorded
+- [x] Kali address persistence after restart confirmed
+
+## 4. Network Configuration
+
+- [x] Windows Adapter 1 uses Internal Network
+- [x] Kali Adapter 1 uses Internal Network
+- [x] Network name matches: LabNet
+- [x] Intended subnet documented: 10.10.10.0/24
+- [x] Windows-to-Kali ping successful
+- [x] Kali-to-Windows ping successful
+- [x] Relevant Windows inbound ICMPv4 Echo Request rule enabled
+- [x] All enabled network adapters reviewed
+- [x] Isolation review completed and documented
+
+## 5. Documentation and Evidence
+
+- [x] README.md completed
+- [x] Main Week 1 report completed
+- [x] Lab design documented
+- [x] Rules of engagement documented
+- [x] VM inventory reviewed
+- [x] Network validation report completed
+- [x] Change log completed
+- [x] Evidence screenshots saved and reviewed
+- [x] Documentation committed to the feature branch
+
+End of checklist.
