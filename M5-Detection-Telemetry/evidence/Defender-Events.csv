@@ -1,0 +1,124 @@
+"TimeCreated","Id","LevelDisplayName","Message"
+"10/19/2026 6:57:18 AM","5007","Information","Microsoft Defender Antivirus Configuration has changed. If this is an unexpected event you should review the settings as this may be the result of malware.
+ 	Old value: 
+ 	New value: HKLM\SOFTWARE\Microsoft\Windows Defender\Miscellaneous Configuration\BddUpdateFailure = 0x0"
+"10/19/2026 6:57:18 AM","5007","Information","Microsoft Defender Antivirus Configuration has changed. If this is an unexpected event you should review the settings as this may be the result of malware.
+ 	Old value: 
+ 	New value: HKLM\SOFTWARE\Microsoft\Windows Defender\Miscellaneous Configuration\DeltaUpdateFailure = 0x0"
+"10/19/2026 6:57:17 AM","5007","Information","Microsoft Defender Antivirus Configuration has changed. If this is an unexpected event you should review the settings as this may be the result of malware.
+ 	Old value: HKLM\SOFTWARE\Microsoft\Windows Defender\SpyNet\SpyNetReportingLocation = 
+SOAP:https://wdcp.microsoft.com/WdCpSrvc.asmx
+SOAP:https://wdcpalt.microsoft.com/WdCpSrvc.asmx
+REST:https://wdcp.microsoft.com/wdcp.svc/submitReport
+REST:https://wdcpalt.microsoft.com/wdcp.svc/submitReport
+BOND:https://wdcp.microsoft.com/wdcp.svc/bond/submitreport
+BOND:https://wdcpalt.microsoft.com/wdcp.svc/bond/submitreport
+
+ 	New value: HKLM\SOFTWARE\Microsoft\Windows Defender\SpyNet\SpyNetReportingLocation = 
+SOAP:https://wdcp.microsoft.com/WdCpSrvc.asmx
+SOAP:https://wdcpalt.microsoft.com/WdCpSrvc.asmx
+REST:https://wdcp.microsoft.com/wdcp.svc/submitReport
+REST:https://wdcpalt.microsoft.com/wdcp.svc/submitReport
+BOND:https://wdcp.microsoft.com/wdcp.svc/bond/submitreport
+BOND:https://wdcpalt.microsoft.com/wdcp.svc/bond/submitreport
+ENTRAHB:https://wdcp.microsoft.com/wdcp.svc/entraReport
+ENTRAHB:https://wdcpalt.microsoft.com/wdcp.svc/entraReport
+"
+"10/19/2026 6:57:17 AM","5007","Information","Microsoft Defender Antivirus Configuration has changed. If this is an unexpected event you should review the settings as this may be the result of malware.
+ 	Old value: 
+ 	New value: HKLM\SOFTWARE\Microsoft\Windows Defender\Features\Controls\9 = 0x1"
+"10/19/2026 6:57:17 AM","5007","Information","Microsoft Defender Antivirus Configuration has changed. If this is an unexpected event you should review the settings as this may be the result of malware.
+ 	Old value: 
+ 	New value: HKLM\SOFTWARE\Microsoft\Windows Defender\Features\Controls\7 = 0x1"
+"10/19/2026 6:57:17 AM","2000","Information","Microsoft Defender Antivirus security intelligence version updated.
+ 	Current security intelligence Version: 1.461.102.0
+ 	Previous security intelligence Version: 1.321.69.0
+ 	Security intelligence Type: AntiSpyware
+ 	Update Type: Full
+ 	User: NT AUTHORITY\SYSTEM
+ 	Current Engine Version: 1.1.26090.9
+ 	Previous Engine Version: 1.1.17300.4"
+"10/19/2026 6:57:17 AM","2000","Information","Microsoft Defender Antivirus security intelligence version updated.
+ 	Current security intelligence Version: 1.461.102.0
+ 	Previous security intelligence Version: 1.321.69.0
+ 	Security intelligence Type: AntiVirus
+ 	Update Type: Full
+ 	User: NT AUTHORITY\SYSTEM
+ 	Current Engine Version: 1.1.26090.9
+ 	Previous Engine Version: 1.1.17300.4"
+"10/19/2026 6:57:17 AM","2002","Information","Microsoft Defender Antivirus engine version has been updated.
+ 	Current Engine Version: 1.1.26090.9
+ 	Previous Engine Version: 1.1.17300.4
+ 	User: NT AUTHORITY\SYSTEM"
+"10/19/2026 6:47:52 AM","5007","Information","Microsoft Defender Antivirus Configuration has changed. If this is an unexpected event you should review the settings as this may be the result of malware.
+ 	Old value: HKLM\SOFTWARE\Microsoft\Windows Defender\ServiceStartStates = 0x1
+ 	New value: Default\ServiceStartStates = 0x0"
+"10/19/2026 6:45:57 AM","5007","Information","Microsoft Defender Antivirus Configuration has changed. If this is an unexpected event you should review the settings as this may be the result of malware.
+ 	Old value: Default\ServiceStartStates = 0x0
+ 	New value: HKLM\SOFTWARE\Microsoft\Windows Defender\ServiceStartStates = 0x1"
+"10/19/2026 4:38:03 AM","5007","Information","Microsoft Defender Antivirus Configuration has changed. If this is an unexpected event you should review the settings as this may be the result of malware.
+ 	Old value: HKLM\SOFTWARE\Microsoft\Windows Defender\ServiceStartStates = 0x1
+ 	New value: Default\ServiceStartStates = 0x0"
+"10/19/2026 4:37:02 AM","5007","Information","Microsoft Defender Antivirus Configuration has changed. If this is an unexpected event you should review the settings as this may be the result of malware.
+ 	Old value: Default\ServiceStartStates = 0x0
+ 	New value: HKLM\SOFTWARE\Microsoft\Windows Defender\ServiceStartStates = 0x1"
+"10/19/2026 3:01:33 AM","5007","Information","Microsoft Defender Antivirus Configuration has changed. If this is an unexpected event you should review the settings as this may be the result of malware.
+ 	Old value: HKLM\SOFTWARE\Microsoft\Windows Defender\ServiceStartStates = 0x1
+ 	New value: Default\ServiceStartStates = 0x0"
+"10/19/2026 3:30:29 PM","5007","Information","Microsoft Defender Antivirus Configuration has changed. If this is an unexpected event you should review the settings as this may be the result of malware.
+ 	Old value: Default\IsServiceRunning = 0x0
+ 	New value: HKLM\SOFTWARE\Microsoft\Windows Defender\IsServiceRunning = 0x1"
+"10/19/2026 3:29:54 PM","5007","Information","Microsoft Defender Antivirus Configuration has changed. If this is an unexpected event you should review the settings as this may be the result of malware.
+ 	Old value: Default\SpyNet\MAPSconcurrencyDss = 0xA
+ 	New value: HKLM\SOFTWARE\Microsoft\Windows Defender\SpyNet\MAPSconcurrencyDss = 0xA"
+"10/19/2026 3:29:54 PM","5007","Information","Microsoft Defender Antivirus Configuration has changed. If this is an unexpected event you should review the settings as this may be the result of malware.
+ 	Old value: Default\SpyNet\SSLOptions = 0x0
+ 	New value: HKLM\SOFTWARE\Microsoft\Windows Defender\SpyNet\SSLOptions = 0x3"
+"10/19/2026 3:29:54 PM","5007","Information","Microsoft Defender Antivirus Configuration has changed. If this is an unexpected event you should review the settings as this may be the result of malware.
+ 	Old value: Default\SpyNet\SpyNetReportingLocation = 
+REST:https://wdcp.microsoft.com/wdcp.svc/submitReport
+
+ 	New value: HKLM\SOFTWARE\Microsoft\Windows Defender\SpyNet\SpyNetReportingLocation = 
+SOAP:https://wdcp.microsoft.com/WdCpSrvc.asmx
+SOAP:https://wdcpalt.microsoft.com/WdCpSrvc.asmx
+REST:https://wdcp.microsoft.com/wdcp.svc/submitReport
+REST:https://wdcpalt.microsoft.com/wdcp.svc/submitReport
+BOND:https://wdcp.microsoft.com/wdcp.svc/bond/submitreport
+BOND:https://wdcpalt.microsoft.com/wdcp.svc/bond/submitreport
+"
+"10/19/2026 3:29:54 PM","5007","Information","Microsoft Defender Antivirus Configuration has changed. If this is an unexpected event you should review the settings as this may be the result of malware.
+ 	Old value: Default\SpyNet\MAPSconcurrency = 0x1
+ 	New value: HKLM\SOFTWARE\Microsoft\Windows Defender\SpyNet\MAPSconcurrency = 0x1"
+"10/19/2026 3:29:54 PM","5007","Information","Microsoft Defender Antivirus Configuration has changed. If this is an unexpected event you should review the settings as this may be the result of malware.
+ 	Old value: Default\Signature Updates\SignatureType = 0x0
+ 	New value: HKLM\SOFTWARE\Microsoft\Windows Defender\Signature Updates\SignatureType = 0x0"
+"10/19/2026 3:29:54 PM","5007","Information","Microsoft Defender Antivirus Configuration has changed. If this is an unexpected event you should review the settings as this may be the result of malware.
+ 	Old value: Default\Scan\DaysUntilAggressiveCatchupQuickScan = 0x19
+ 	New value: HKLM\SOFTWARE\Microsoft\Windows Defender\Scan\DaysUntilAggressiveCatchupQuickScan = 0x1E"
+"10/19/2026 3:29:54 PM","5007","Information","Microsoft Defender Antivirus Configuration has changed. If this is an unexpected event you should review the settings as this may be the result of malware.
+ 	Old value: Default\Scan\AggressiveCatchupQuickScanReattemptElapsed = 0x17
+ 	New value: HKLM\SOFTWARE\Microsoft\Windows Defender\Scan\AggressiveCatchupQuickScanReattemptElapsed = 0x17"
+"10/19/2026 3:29:54 PM","5007","Information","Microsoft Defender Antivirus Configuration has changed. If this is an unexpected event you should review the settings as this may be the result of malware.
+ 	Old value: Default\Real-Time Protection\DpaDisabled = 0x0
+ 	New value: HKLM\SOFTWARE\Microsoft\Windows Defender\Real-Time Protection\DpaDisabled = 0x0"
+"10/19/2026 3:29:54 PM","5007","Information","Microsoft Defender Antivirus Configuration has changed. If this is an unexpected event you should review the settings as this may be the result of malware.
+ 	Old value: Default\Features\TamperProtectionSource = 0x0
+ 	New value: HKLM\SOFTWARE\Microsoft\Windows Defender\Features\TamperProtectionSource = 0x5"
+"10/19/2026 3:29:16 PM","5007","Information","Microsoft Defender Antivirus Configuration has changed. If this is an unexpected event you should review the settings as this may be the result of malware.
+ 	Old value: Default\Features\TamperProtection = 0x0
+ 	New value: HKLM\SOFTWARE\Microsoft\Windows Defender\Features\TamperProtection = 0x0"
+"10/19/2026 3:29:16 PM","5007","Information","Microsoft Defender Antivirus Configuration has changed. If this is an unexpected event you should review the settings as this may be the result of malware.
+ 	Old value: Default\ServiceStartStates = 0x0
+ 	New value: HKLM\SOFTWARE\Microsoft\Windows Defender\ServiceStartStates = 0x1"
+"10/19/2026 3:29:16 PM","5007","Information","Microsoft Defender Antivirus Configuration has changed. If this is an unexpected event you should review the settings as this may be the result of malware.
+ 	Old value: Default\ManagedDefenderProductType = 0x0
+ 	New value: HKLM\SOFTWARE\Microsoft\Windows Defender\ManagedDefenderProductType = 0x0"
+"10/19/2026 3:29:11 PM","5007","Information","Microsoft Defender Antivirus Configuration has changed. If this is an unexpected event you should review the settings as this may be the result of malware.
+ 	Old value: N/A\ProductType = 
+ 	New value: HKLM\SOFTWARE\Microsoft\Windows Defender\ProductType = 0x2"
+"10/19/2026 3:29:11 PM","5007","Information","Microsoft Defender Antivirus Configuration has changed. If this is an unexpected event you should review the settings as this may be the result of malware.
+ 	Old value: Default\IsServiceRunning = 0x0
+ 	New value: HKLM\SOFTWARE\Microsoft\Windows Defender\IsServiceRunning = 0x1"
+"10/19/2026 3:29:11 PM","5007","Information","Microsoft Defender Antivirus Configuration has changed. If this is an unexpected event you should review the settings as this may be the result of malware.
+ 	Old value: Default\InstallLocation = C:\Program Files\Windows Defender
+ 	New value: HKLM\SOFTWARE\Microsoft\Windows Defender\InstallLocation = C:\Program Files\Windows Defender\"

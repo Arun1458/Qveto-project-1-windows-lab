@@ -1,0 +1,5 @@
+#Version: 1.5
+#Software: Microsoft Windows Firewall
+#Time Format: Local
+#Fields: date time action protocol src-ip dst-ip src-port dst-port size tcpflags tcpsyn tcpack tcpwin icmptype icmpcode info path pid
+
