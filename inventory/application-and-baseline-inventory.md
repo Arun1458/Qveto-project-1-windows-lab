@@ -1,25 +1,26 @@
-# Week 1 Deliverable: VM & Baseline Configuration Inventory (M3)
+# Week 1 Deliverable: Application & Security Baseline Inventory (M3)
 
-## 1. Confirmed Virtual Machine Specifications (From Lab Setup)
-* **VM Name:** `windows11-lab`
-* **Operating System:** Windows 11 (64-bit)
-* **Base Memory (RAM):** 4096 MB (4 GB)
-* **Processors:** 3 vCPUs
-* **Boot Order:** Hard Disk, Optical, Floppy
-* **Platform Security Features:**
-  * **TPM Type:** 2.0
-  * **EFI:** Enabled
-  * **Secure Boot:** Enabled
-  * **Hardware Virtualization:** VT-x/AMD-V, Nested Paging, Hyper-V Paravirtualization
-* **Distribution Method:** Standardized team `.ova` appliance image for reproducible assessment across all team roles.
+**Project:** Windows Exploitation & Privilege Escalation Lab  
+**Role:** M3 — Vulnerability Assessment Analyst  
+**Aligned with M2 Baseline:** `LabNet` (`10.10.10.0/24`) | Oracle VirtualBox 7.2.20  
 
-## 2. Operating System & Patch State Baseline
-| Target VM Name | OS Version & Build | Architecture | Installed Hotfixes (KB) | Patch Status |
-|----------------|--------------------|--------------|-------------------------|--------------|
-| `windows11-lab` | Windows 11 (64-bit) | x64 | Pending `.ova` import & `systeminfo` check | Baseline |
+## 1. Confirmed Lab Environment & Network Parameters
+| Component | VM Name | IPv4 Address | Network Attachment | Allocated Resources | Baseline Snapshot |
+|-----------|---------|--------------|--------------------|---------------------|-------------------|
+| **Target System** | `windows11-lab` | `10.10.10.20/24` | Internal Network (`LabNet`) | 3 vCPUs, 4096 MB RAM, 80.00 GB Disk | `windows11-clean-install` |
+| **Testing System** | `kali-linux-2026.2-virtualbox-amd64` | `10.10.10.10/24` (`eth0`) | Internal Network (`LabNet`) | 2 vCPUs, 2048 MB RAM, 80.09 GB Disk | `kali-clean-install` |
 
-## 3. Baseline Security Settings & Audit Scope (M3)
-* **Windows Defender Status:** Real-time protection and tamper protection baseline to be verified upon `.ova` import.
-* **UAC Configuration:** `EnableLUA` and `ConsentPromptBehaviorAdmin` registry baseline.
-* **Service Path Hygiene:** Audit non-default services for unquoted service paths running as `LocalSystem`.
-* **Directory/Binary ACLs:** Inspect `icacls` permissions on third-party application directories.
+* **Isolation Boundary:** No default gateway, no DNS server, and no DHCP configured on `LabNet`.
+* **Baseline Firewall Note:** Windows Firewall remains enabled; inbound ICMPv4 Echo Request rule enabled for bidirectional connectivity validation (`10.10.10.10` <-> `10.10.10.20`).
+
+## 2. Windows 11 Guest OS & Security Baseline Status (M3 Audit Scope)
+*(Addressing Outstanding Baseline Items from Week 1 Virtualization Report)*
+
+| Baseline Check Area | Inspection Command / Tool | Current Recorded State |
+|---------------------|---------------------------|------------------------|
+| **Exact Guest OS Build** | `systeminfo` / `winver` | Windows 11 64-bit (Exact build version to be logged from VM) |
+| **Windows Defender Status** | `Get-MpComputerStatus` | Pending baseline verification on `windows11-lab` |
+| **Windows Firewall Profiles** | `netsh advfirewall show allprofiles` | Enabled (Inbound ICMPv4 Echo Request allowed on `LabNet`) |
+| **Windows Update / Patch State** | `wmic qfe list brief` | Pending KB hotfix enumeration |
+| **UAC Configuration** | `reg query ...\Policies\System` | Pending baseline verification |
+| **Installed Applications & Services** | `sc query` / `wmic service` | Pending Week 2 service & permission audit |
