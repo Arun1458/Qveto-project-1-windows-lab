@@ -1,26 +1,45 @@
-# Week 1 Deliverable: Application & Security Baseline Inventory (M3)
+# Week 1 & 2 Deliverable: VM, OS & Configuration Baseline Inventory (M3)
 
 **Project:** Windows Exploitation & Privilege Escalation Lab  
-**Role:** M3 — Vulnerability Assessment Analyst  
-**Aligned with M2 Baseline:** `LabNet` (`10.10.10.0/24`) | Oracle VirtualBox 7.2.20  
+**Prepared by:** Shrinidhi Shankar (M3 — Vulnerability Assessment Analyst)  
+**Date Updated:** 21 October 2026  
+**Target Environment:** `LabNet` (`10.10.10.0/24`) on Oracle VirtualBox 7.2.20  
 
-## 1. Confirmed Lab Environment & Network Parameters
-| Component | VM Name | IPv4 Address | Network Attachment | Allocated Resources | Baseline Snapshot |
-|-----------|---------|--------------|--------------------|---------------------|-------------------|
-| **Target System** | `windows11-lab` | `10.10.10.20/24` | Internal Network (`LabNet`) | 3 vCPUs, 4096 MB RAM, 80.00 GB Disk | `windows11-clean-install` |
-| **Testing System** | `kali-linux-2026.2-virtualbox-amd64` | `10.10.10.10/24` (`eth0`) | Internal Network (`LabNet`) | 2 vCPUs, 2048 MB RAM, 80.09 GB Disk | `kali-clean-install` |
+---
 
-* **Isolation Boundary:** No default gateway, no DNS server, and no DHCP configured on `LabNet`.
-* **Baseline Firewall Note:** Windows Firewall remains enabled; inbound ICMPv4 Echo Request rule enabled for bidirectional connectivity validation (`10.10.10.10` <-> `10.10.10.20`).
+## 1. Verified Guest OS & User Account Inventory (From Lab Evidence)
 
-## 2. Windows 11 Guest OS & Security Baseline Status (M3 Audit Scope)
-*(Addressing Outstanding Baseline Items from Week 1 Virtualization Report)*
+| Property | Target VM (`windows11-lab`) | Testing VM (`kali-linux-2026.2-virtualbox-amd64`) |
+|----------|-----------------------------|---------------------------------------------------|
+| **Exact OS Version / Build** | Microsoft Windows 11 (64-bit) — `Version 10.0.26300.9457` | Kali Linux 2026.2 (Debian 64-bit) |
+| **Active Local User Account** | `C:\Users\LABWIN` (`LABWIN`) | `kali@kali` |
+| **Allocated CPU / RAM** | 3 vCPUs / 4096 MB RAM | 2 vCPUs / 2048 MB RAM |
+| **Virtual Storage (VDI)** | `windows11-lab.vdi` (80.00 GB, SATA Port 0) | `kali-linux-2026.2-virtualbox-amd64.vdi` (80.09 GB, SATA Port 0) |
+| **Optical Drive (SATA Port 1)** | `Unattended-cddcb9b5-b668-4185-910b-88e884f7a503-aux-iso.viso` | Empty |
+| **Platform Security Controls** | TPM 2.0, EFI Enabled, Secure Boot Enabled | PAE/NX, Nested Paging, KVM Paravirtualization |
+| **Snapshots Recorded** | `windows11-clean-install`, `w1-network-verified` | `kali-clean-install`, `w1-network-verified` |
 
-| Baseline Check Area | Inspection Command / Tool | Current Recorded State |
-|---------------------|---------------------------|------------------------|
-| **Exact Guest OS Build** | `systeminfo` / `winver` | Windows 11 64-bit (Exact build version to be logged from VM) |
-| **Windows Defender Status** | `Get-MpComputerStatus` | Pending baseline verification on `windows11-lab` |
-| **Windows Firewall Profiles** | `netsh advfirewall show allprofiles` | Enabled (Inbound ICMPv4 Echo Request allowed on `LabNet`) |
-| **Windows Update / Patch State** | `wmic qfe list brief` | Pending KB hotfix enumeration |
-| **UAC Configuration** | `reg query ...\Policies\System` | Pending baseline verification |
-| **Installed Applications & Services** | `sc query` / `wmic service` | Pending Week 2 service & permission audit |
+---
+
+## 2. Verified Network & Isolation Baseline
+
+| Parameter | Target VM (`windows11-lab`) | Testing VM (`kali-linux-2026.2-virtualbox-amd64`) |
+|-----------|-----------------------------|---------------------------------------------------|
+| **Network Attachment** | Internal Network (`LabNet`) | Internal Network (`LabNet`) |
+| **Adapter Hardware Type** | Intel PRO/1000 MT Desktop (`82540EM`) | Intel PRO/1000 MT Desktop (`82540EM`) |
+| **MAC Address** | `080027A225CD` | `0800275A87BC` |
+| **Promiscuous Mode** | `Deny` | `Deny` |
+| **IPv4 Address / Subnet** | `10.10.10.20` / `255.255.255.0` (`/24`) | `10.10.10.10/24` (`eth0`) |
+| **Link-Local IPv6 Address** | `fe80::bfce:cc09:d8c9:3173%4` | N/A (IPv4 scope link confirmed via `ip route`) |
+| **Default Gateway / DNS** | Blank (None configured — Confirmed Isolated) | None (`10.10.10.0/24 dev eth0 proto kernel scope link`) |
+
+---
+
+## 3. M3 Baseline Configuration Audit Observations (Week 1 Verification)
+
+During the M3 configuration review of the Week 1 baseline evidence, the following technical observations were logged:
+
+1. **OBS-M3-01 (Firewall Exception Change):** The Windows Firewall inbound ICMPv4 Echo Request rule was enabled on `windows11-lab` to permit ICMP echo requests from `10.10.10.10` (`0% packet loss`, TTL=128).
+2. **OBS-M3-02 (Validation Test Command Discrepancy):** In `ping-windows-to-kali.png`, the Windows host `LABWIN` executed `ping 10.10.10.20` (loopback ping to its own IPv4 address) rather than `ping 10.10.10.10`. Bidirectional connectivity is still confirmed via the ARP/ICMP reply in `ping-kali-to-windows.jpeg`, but `ping 10.10.10.10` from `LABWIN` should be re-captured for clean evidence.
+3. **OBS-M3-03 (Pre-Isolation Adapter Snapshot Check):** `Kali VM Config 2.png` captured Adapter 1 in `NAT` mode prior to switching to `Internal Network ('LabNet')` in `kali-network-settings.png`. Both VMs must remain locked to `LabNet` under snapshot `w1-network-verified` prior to Week 2 privilege escalation testing.
+4. **OBS-M3-04 (Mounted Unattended Provisioning ISO):** `windows11-lab` currently has `Unattended-...-aux-iso.viso` mounted on SATA Port 1. As part of baseline hygiene, unattended installation media should be unmounted and inspected to ensure no plaintext setup scripts remain accessible to standard users.
