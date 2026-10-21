@@ -1,0 +1,668 @@
+"TimeCreated","Id","LevelDisplayName","Message"
+"10/19/2026 6:57:24 AM","5","Information","Process terminated:
+RuleName: -
+UtcTime: 2026-10-19 13:57:24.575
+ProcessGuid: {fb54b6e3-21c4-6ad6-c400-000000000400}
+ProcessId: 4848
+Image: C:\Users\Administrator\Downloads\Sysmon\Sysmon64.exe
+User: WIN-52LLRI1KBG7\Administrator"
+"10/19/2026 6:57:24 AM","1","Information","Process Create:
+RuleName: -
+UtcTime: 2026-10-19 13:57:24.531
+ProcessGuid: {fb54b6e3-21c4-6ad6-c400-000000000400}
+ProcessId: 4848
+Image: C:\Users\Administrator\Downloads\Sysmon\Sysmon64.exe
+FileVersion: 15.22
+Description: System activity monitor
+Product: Sysinternals Sysmon
+Company: Sysinternals - www.sysinternals.com
+OriginalFileName: -
+CommandLine: ""C:\Users\Administrator\Downloads\Sysmon\Sysmon64.exe"" -c
+CurrentDirectory: C:\Users\Administrator\Downloads\Sysmon\
+User: WIN-52LLRI1KBG7\Administrator
+LogonGuid: {fb54b6e3-1f68-6ad6-946f-020000000000}
+LogonId: 0x26F94
+TerminalSessionId: 1
+IntegrityLevel: High
+Hashes: SHA256=83D31F2478DC6716CFDBF69E5C384BF043072B5F0D8D7B2EEA365F709FDA4352
+ParentProcessGuid: {fb54b6e3-204d-6ad6-9300-000000000400}
+ParentProcessId: 2032
+ParentImage: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+ParentCommandLine: ""C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe"" 
+ParentUser: WIN-52LLRI1KBG7\Administrator"
+"10/19/2026 6:57:17 AM","5","Information","Process terminated:
+RuleName: -
+UtcTime: 2026-10-19 13:57:17.718
+ProcessGuid: {fb54b6e3-218f-6ad6-bb00-000000000400}
+ProcessId: 1992
+Image: C:\Windows\System32\conhost.exe
+User: NT AUTHORITY\SYSTEM"
+"10/19/2026 6:57:17 AM","5","Information","Process terminated:
+RuleName: -
+UtcTime: 2026-10-19 13:57:17.718
+ProcessGuid: {fb54b6e3-218f-6ad6-ba00-000000000400}
+ProcessId: 1972
+Image: C:\Program Files\Windows Defender\MpCmdRun.exe
+User: NT AUTHORITY\SYSTEM"
+"10/19/2026 6:57:17 AM","5","Information","Process terminated:
+RuleName: -
+UtcTime: 2026-10-19 13:57:17.708
+ProcessGuid: {fb54b6e3-218f-6ad6-b900-000000000400}
+ProcessId: 3512
+Image: C:\Program Files\Windows Defender\MpCmdRun.exe
+User: NT AUTHORITY\NETWORK SERVICE"
+"10/19/2026 6:57:17 AM","5","Information","Process terminated:
+RuleName: -
+UtcTime: 2026-10-19 13:57:17.708
+ProcessGuid: {fb54b6e3-219f-6ad6-be00-000000000400}
+ProcessId: 1376
+Image: C:\Windows\System32\wuauclt.exe
+User: NT AUTHORITY\SYSTEM"
+"10/19/2026 6:57:17 AM","5","Information","Process terminated:
+RuleName: -
+UtcTime: 2026-10-19 13:57:17.672
+ProcessGuid: {fb54b6e3-21ab-6ad6-c300-000000000400}
+ProcessId: 2712
+Image: C:\Windows\SoftwareDistribution\Download\Install\AM_Delta.exe
+User: NT AUTHORITY\SYSTEM"
+"10/19/2026 6:57:17 AM","5","Information","Process terminated:
+RuleName: -
+UtcTime: 2026-10-19 13:57:17.672
+ProcessGuid: {fb54b6e3-21a0-6ad6-c100-000000000400}
+ProcessId: 2900
+Image: C:\Windows\System32\MpSigStub.exe
+User: NT AUTHORITY\SYSTEM"
+"10/19/2026 6:57:13 AM","5","Information","Process terminated:
+RuleName: -
+UtcTime: 2026-10-19 13:57:13.825
+ProcessGuid: {fb54b6e3-2190-6ad6-bd00-000000000400}
+ProcessId: 4268
+Image: C:\Windows\System32\sppsvc.exe
+User: NT AUTHORITY\NETWORK SERVICE"
+"10/19/2026 6:57:12 AM","5","Information","Process terminated:
+RuleName: -
+UtcTime: 2026-10-19 13:57:12.008
+ProcessGuid: {fb54b6e3-2157-6ad6-b600-000000000400}
+ProcessId: 4848
+Image: C:\Windows\System32\notepad.exe
+User: WIN-52LLRI1KBG7\Administrator"
+"10/19/2026 6:56:59 AM","1","Information","Process Create:
+RuleName: -
+UtcTime: 2026-10-19 13:56:59.863
+ProcessGuid: {fb54b6e3-21ab-6ad6-c300-000000000400}
+ProcessId: 2712
+Image: C:\Windows\SoftwareDistribution\Download\Install\AM_Delta.exe
+FileVersion: 1.461.102.0
+Description: AntiMalware Definition Update
+Product: Microsoft Malware Protection
+Company: Microsoft Corporation
+OriginalFileName: AM_Delta.exe
+CommandLine: ""C:\Windows\SoftwareDistribution\Download\Install\AM_Delta.exe"" WD /q
+CurrentDirectory: C:\Windows\SoftwareDistribution\Download\Install\
+User: NT AUTHORITY\SYSTEM
+LogonGuid: {fb54b6e3-cf0b-6ad6-e703-000000000000}
+LogonId: 0x3E7
+TerminalSessionId: 0
+IntegrityLevel: System
+Hashes: SHA256=3D35564726381D5AF45DB3135E82F6AA6BF662A16E15BA55AD8C95D61D11AA0A
+ParentProcessGuid: {fb54b6e3-219f-6ad6-be00-000000000400}
+ParentProcessId: 1376
+ParentImage: C:\Windows\System32\wuauclt.exe
+ParentCommandLine: ""C:\Windows\system32\wuauclt.exe"" /DeploymentHandlerFullPath C:\Windows\SYSTEM32\UpdateDeploy.dll /ClassId 9b7e2fb5-9b79-4a83-ac41-e5b1ac17dc23 /RunHandlerComServer
+ParentUser: NT AUTHORITY\SYSTEM"
+"10/19/2026 6:56:59 AM","5","Information","Process terminated:
+RuleName: -
+UtcTime: 2026-10-19 13:56:59.719
+ProcessGuid: {fb54b6e3-21a6-6ad6-c200-000000000400}
+ProcessId: 848
+Image: C:\Windows\SoftwareDistribution\Download\Install\AM_Base.exe
+User: NT AUTHORITY\SYSTEM"
+"10/19/2026 6:56:55 AM","1","Information","Process Create:
+RuleName: -
+UtcTime: 2026-10-19 13:56:54.910
+ProcessGuid: {fb54b6e3-21a6-6ad6-c200-000000000400}
+ProcessId: 848
+Image: C:\Windows\SoftwareDistribution\Download\Install\AM_Base.exe
+FileVersion: 1.461.0.0
+Description: AntiMalware Definition Update
+Product: Microsoft Malware Protection
+Company: Microsoft Corporation
+OriginalFileName: AM_Base.exe
+CommandLine: ""C:\Windows\SoftwareDistribution\Download\Install\AM_Base.exe"" 
+CurrentDirectory: C:\Windows\SoftwareDistribution\Download\Install\
+User: NT AUTHORITY\SYSTEM
+LogonGuid: {fb54b6e3-cf0b-6ad6-e703-000000000000}
+LogonId: 0x3E7
+TerminalSessionId: 0
+IntegrityLevel: System
+Hashes: SHA256=03FDD409E229ED72E0068623EF9954D8C989E71241049C237FA2CD31550C925E
+ParentProcessGuid: {fb54b6e3-219f-6ad6-be00-000000000400}
+ParentProcessId: 1376
+ParentImage: C:\Windows\System32\wuauclt.exe
+ParentCommandLine: ""C:\Windows\system32\wuauclt.exe"" /DeploymentHandlerFullPath C:\Windows\SYSTEM32\UpdateDeploy.dll /ClassId 9b7e2fb5-9b79-4a83-ac41-e5b1ac17dc23 /RunHandlerComServer
+ParentUser: NT AUTHORITY\SYSTEM"
+"10/19/2026 6:56:50 AM","5","Information","Process terminated:
+RuleName: -
+UtcTime: 2026-10-19 13:56:50.184
+ProcessGuid: {fb54b6e3-21a0-6ad6-c000-000000000400}
+ProcessId: 3664
+Image: C:\Windows\SoftwareDistribution\Download\Install\AM_Engine.exe
+User: NT AUTHORITY\SYSTEM"
+"10/19/2026 6:56:48 AM","1","Information","Process Create:
+RuleName: -
+UtcTime: 2026-10-19 13:56:48.199
+ProcessGuid: {fb54b6e3-21a0-6ad6-c100-000000000400}
+ProcessId: 2900
+Image: C:\Windows\System32\MpSigStub.exe
+FileVersion: 1.1.24010.2001 (7122f19e8a45ed98fbe41ea0bdadf251e45717f9)
+Description: Microsoft Malware Protection Signature Update Stub
+Product: Microsoft Malware Protection
+Company: Microsoft Corporation
+OriginalFileName: MpSigStub.exe
+CommandLine: C:\Windows\system32\MpSigStub.exe /stub 1.1.24010.2001 /payload 1.1.26090.9 /MpWUStub /program C:\Windows\SoftwareDistribution\Download\Install\AM_Engine.exe
+CurrentDirectory: C:\Windows\system32\
+User: NT AUTHORITY\SYSTEM
+LogonGuid: {fb54b6e3-cf0b-6ad6-e703-000000000000}
+LogonId: 0x3E7
+TerminalSessionId: 0
+IntegrityLevel: System
+Hashes: SHA256=071B0D3A08503A8B88AEEDA1D20F371A563377028F6E252DC66CCE60AB8F823E
+ParentProcessGuid: {fb54b6e3-219f-6ad6-be00-000000000400}
+ParentProcessId: 1376
+ParentImage: C:\Windows\System32\wuauclt.exe
+ParentCommandLine: ""C:\Windows\system32\wuauclt.exe"" /DeploymentHandlerFullPath C:\Windows\SYSTEM32\UpdateDeploy.dll /ClassId 9b7e2fb5-9b79-4a83-ac41-e5b1ac17dc23 /RunHandlerComServer
+ParentUser: NT AUTHORITY\SYSTEM"
+"10/19/2026 6:56:48 AM","1","Information","Process Create:
+RuleName: -
+UtcTime: 2026-10-19 13:56:48.075
+ProcessGuid: {fb54b6e3-21a0-6ad6-c000-000000000400}
+ProcessId: 3664
+Image: C:\Windows\SoftwareDistribution\Download\Install\AM_Engine.exe
+FileVersion: 1.1.26090.9
+Description: AntiMalware Definition Update
+Product: Microsoft Malware Protection
+Company: Microsoft Corporation
+OriginalFileName: AM_Engine.exe
+CommandLine: ""C:\Windows\SoftwareDistribution\Download\Install\AM_Engine.exe"" 
+CurrentDirectory: C:\Windows\SoftwareDistribution\Download\Install\
+User: NT AUTHORITY\SYSTEM
+LogonGuid: {fb54b6e3-cf0b-6ad6-e703-000000000000}
+LogonId: 0x3E7
+TerminalSessionId: 0
+IntegrityLevel: System
+Hashes: SHA256=9FE3609E6393DA1750A77E3E91EB8CF4F6253F09C85B2AB497F57ADDEECC70BB
+ParentProcessGuid: {fb54b6e3-219f-6ad6-be00-000000000400}
+ParentProcessId: 1376
+ParentImage: C:\Windows\System32\wuauclt.exe
+ParentCommandLine: ""C:\Windows\system32\wuauclt.exe"" /DeploymentHandlerFullPath C:\Windows\SYSTEM32\UpdateDeploy.dll /ClassId 9b7e2fb5-9b79-4a83-ac41-e5b1ac17dc23 /RunHandlerComServer
+ParentUser: NT AUTHORITY\SYSTEM"
+"10/19/2026 6:56:47 AM","5","Information","Process terminated:
+RuleName: -
+UtcTime: 2026-10-19 13:56:47.812
+ProcessGuid: {fb54b6e3-219f-6ad6-bf00-000000000400}
+ProcessId: 5108
+Image: C:\Windows\SoftwareDistribution\Download\Install\MpSigStub.exe
+User: NT AUTHORITY\SYSTEM"
+"10/19/2026 6:56:47 AM","1","Information","Process Create:
+RuleName: -
+UtcTime: 2026-10-19 13:56:47.773
+ProcessGuid: {fb54b6e3-219f-6ad6-bf00-000000000400}
+ProcessId: 5108
+Image: C:\Windows\SoftwareDistribution\Download\Install\MpSigStub.exe
+FileVersion: 1.1.24010.2001 (7122f19e8a45ed98fbe41ea0bdadf251e45717f9)
+Description: Microsoft Malware Protection Signature Update Stub
+Product: Microsoft Malware Protection
+Company: Microsoft Corporation
+OriginalFileName: MpSigStub.exe
+CommandLine: ""C:\Windows\SoftwareDistribution\Download\Install\MpSigStub.exe"" /Store
+CurrentDirectory: C:\Windows\SoftwareDistribution\Download\Install\
+User: NT AUTHORITY\SYSTEM
+LogonGuid: {fb54b6e3-cf0b-6ad6-e703-000000000000}
+LogonId: 0x3E7
+TerminalSessionId: 0
+IntegrityLevel: System
+Hashes: SHA256=071B0D3A08503A8B88AEEDA1D20F371A563377028F6E252DC66CCE60AB8F823E
+ParentProcessGuid: {fb54b6e3-219f-6ad6-be00-000000000400}
+ParentProcessId: 1376
+ParentImage: C:\Windows\System32\wuauclt.exe
+ParentCommandLine: ""C:\Windows\system32\wuauclt.exe"" /DeploymentHandlerFullPath C:\Windows\SYSTEM32\UpdateDeploy.dll /ClassId 9b7e2fb5-9b79-4a83-ac41-e5b1ac17dc23 /RunHandlerComServer
+ParentUser: NT AUTHORITY\SYSTEM"
+"10/19/2026 6:56:47 AM","1","Information","Process Create:
+RuleName: -
+UtcTime: 2026-10-19 13:56:47.538
+ProcessGuid: {fb54b6e3-219f-6ad6-be00-000000000400}
+ProcessId: 1376
+Image: C:\Windows\System32\wuauclt.exe
+FileVersion: 10.0.20348.502 (WinBuild.160101.0800)
+Description: Windows Update
+Product: Microsoft? Windows? Operating System
+Company: Microsoft Corporation
+OriginalFileName: wuauclt.exe
+CommandLine: ""C:\Windows\system32\wuauclt.exe"" /DeploymentHandlerFullPath C:\Windows\SYSTEM32\UpdateDeploy.dll /ClassId 9b7e2fb5-9b79-4a83-ac41-e5b1ac17dc23 /RunHandlerComServer
+CurrentDirectory: C:\Windows\system32\
+User: NT AUTHORITY\SYSTEM
+LogonGuid: {fb54b6e3-cf0b-6ad6-e703-000000000000}
+LogonId: 0x3E7
+TerminalSessionId: 0
+IntegrityLevel: System
+Hashes: SHA256=DBB2C79538FB04D83CF1DA06F783A49C783B0703D54E01B8768C44183C2D1A5C
+ParentProcessGuid: {fb54b6e3-1fc9-6ad6-8700-000000000400}
+ParentProcessId: 4716
+ParentImage: C:\Windows\System32\svchost.exe
+ParentCommandLine: C:\Windows\system32\svchost.exe -k netsvcs -p -s wuauserv
+ParentUser: NT AUTHORITY\SYSTEM"
+"10/19/2026 6:56:37 AM","5","Information","Process terminated:
+RuleName: -
+UtcTime: 2026-10-19 13:56:37.126
+ProcessGuid: {fb54b6e3-1f6a-6ad6-5900-000000000400}
+ProcessId: 3364
+Image: C:\Windows\System32\svchost.exe
+User: NT AUTHORITY\SYSTEM"
+"10/19/2026 6:56:32 AM","1","Information","Process Create:
+RuleName: -
+UtcTime: 2026-10-19 13:56:32.685
+ProcessGuid: {fb54b6e3-2190-6ad6-bd00-000000000400}
+ProcessId: 4268
+Image: C:\Windows\System32\sppsvc.exe
+FileVersion: 10.0.20348.587 (WinBuild.160101.0800)
+Description: Microsoft Software Protection Platform Service
+Product: Microsoft? Windows? Operating System
+Company: Microsoft Corporation
+OriginalFileName: sppsvc.exe
+CommandLine: C:\Windows\system32\sppsvc.exe
+CurrentDirectory: C:\Windows
+User: NT AUTHORITY\NETWORK SERVICE
+LogonGuid: {fb54b6e3-cf0d-6ad6-e403-000000000000}
+LogonId: 0x3E4
+TerminalSessionId: 0
+IntegrityLevel: System
+Hashes: SHA256=47C9686BDFF1CC6573FC4BD0BE49B734F5105A01B78B3938819BD4E0CEF90D6D
+ParentProcessGuid: {00000000-0000-0000-0000-000000000000}
+ParentProcessId: 664
+ParentImage: -
+ParentCommandLine: -
+ParentUser: -"
+"10/19/2026 6:56:31 AM","1","Information","Process Create:
+RuleName: -
+UtcTime: 2026-10-19 13:56:31.859
+ProcessGuid: {fb54b6e3-218f-6ad6-bc00-000000000400}
+ProcessId: 5076
+Image: C:\Windows\System32\wbem\WmiPrvSE.exe
+FileVersion: 10.0.20348.1 (WinBuild.160101.0800)
+Description: WMI Provider Host
+Product: Microsoft? Windows? Operating System
+Company: Microsoft Corporation
+OriginalFileName: Wmiprvse.exe
+CommandLine: C:\Windows\system32\wbem\wmiprvse.exe -secured -Embedding
+CurrentDirectory: C:\Windows\system32\
+User: NT AUTHORITY\NETWORK SERVICE
+LogonGuid: {fb54b6e3-cf0d-6ad6-e403-000000000000}
+LogonId: 0x3E4
+TerminalSessionId: 0
+IntegrityLevel: System
+Hashes: SHA256=1792731E030B7FE35A7EB21C9F907EAE6E4AC381DE918003F2709185C4CE0A5A
+ParentProcessGuid: {00000000-0000-0000-0000-000000000000}
+ParentProcessId: 796
+ParentImage: -
+ParentCommandLine: -
+ParentUser: -"
+"10/19/2026 6:56:31 AM","1","Information","Process Create:
+RuleName: -
+UtcTime: 2026-10-19 13:56:31.669
+ProcessGuid: {fb54b6e3-218f-6ad6-bb00-000000000400}
+ProcessId: 1992
+Image: C:\Windows\System32\conhost.exe
+FileVersion: 10.0.20348.558 (WinBuild.160101.0800)
+Description: Console Window Host
+Product: Microsoft? Windows? Operating System
+Company: Microsoft Corporation
+OriginalFileName: CONHOST.EXE
+CommandLine: \??\C:\Windows\system32\conhost.exe 0xffffffff -ForceV1
+CurrentDirectory: C:\Windows
+User: NT AUTHORITY\SYSTEM
+LogonGuid: {fb54b6e3-cf0b-6ad6-e703-000000000000}
+LogonId: 0x3E7
+TerminalSessionId: 0
+IntegrityLevel: System
+Hashes: SHA256=6B481D656414C50D8BD0BEDCD615AEAF2F5F68576CB6732A9548E0DA87729733
+ParentProcessGuid: {fb54b6e3-218f-6ad6-ba00-000000000400}
+ParentProcessId: 1972
+ParentImage: C:\Program Files\Windows Defender\MpCmdRun.exe
+ParentCommandLine: ""C:\Program Files\Windows Defender\MpCmdRun.exe"" SignaturesUpdateService -ScheduleJob -UnmanagedUpdate
+ParentUser: NT AUTHORITY\SYSTEM"
+"10/19/2026 6:56:31 AM","1","Information","Process Create:
+RuleName: -
+UtcTime: 2026-10-19 13:56:31.657
+ProcessGuid: {fb54b6e3-218f-6ad6-ba00-000000000400}
+ProcessId: 1972
+Image: C:\Program Files\Windows Defender\MpCmdRun.exe
+FileVersion: 4.18.2104.5 (WinBuild.160101.0800)
+Description: Microsoft Malware Protection Command Line Utility
+Product: Microsoft? Windows? Operating System
+Company: Microsoft Corporation
+OriginalFileName: MpCmdRun.exe
+CommandLine: ""C:\Program Files\Windows Defender\MpCmdRun.exe"" SignaturesUpdateService -ScheduleJob -UnmanagedUpdate
+CurrentDirectory: C:\Windows\system32\
+User: NT AUTHORITY\SYSTEM
+LogonGuid: {fb54b6e3-cf0b-6ad6-e703-000000000000}
+LogonId: 0x3E7
+TerminalSessionId: 0
+IntegrityLevel: System
+Hashes: SHA256=1CD644B750884906B707419C8F40598C04F1402E4E93CBF4A33F3254846DC870
+ParentProcessGuid: {fb54b6e3-1f12-6ad6-3e00-000000000400}
+ParentProcessId: 2324
+ParentImage: C:\Program Files\Windows Defender\MsMpEng.exe
+ParentCommandLine: ""C:\Program Files\Windows Defender\MsMpEng.exe""
+ParentUser: NT AUTHORITY\SYSTEM"
+"10/19/2026 6:56:31 AM","5","Information","Process terminated:
+RuleName: -
+UtcTime: 2026-10-19 13:56:31.620
+ProcessGuid: {fb54b6e3-218f-6ad6-b800-000000000400}
+ProcessId: 1472
+Image: C:\Windows\System32\conhost.exe
+User: NT AUTHORITY\SYSTEM"
+"10/19/2026 6:56:31 AM","5","Information","Process terminated:
+RuleName: -
+UtcTime: 2026-10-19 13:56:31.601
+ProcessGuid: {fb54b6e3-218f-6ad6-b700-000000000400}
+ProcessId: 4548
+Image: C:\Program Files\Windows Defender\MpCmdRun.exe
+User: NT AUTHORITY\SYSTEM"
+"10/19/2026 6:56:31 AM","1","Information","Process Create:
+RuleName: -
+UtcTime: 2026-10-19 13:56:31.513
+ProcessGuid: {fb54b6e3-218f-6ad6-b900-000000000400}
+ProcessId: 3512
+Image: C:\Program Files\Windows Defender\MpCmdRun.exe
+FileVersion: 4.18.2104.5 (WinBuild.160101.0800)
+Description: Microsoft Malware Protection Command Line Utility
+Product: Microsoft? Windows? Operating System
+Company: Microsoft Corporation
+OriginalFileName: MpCmdRun.exe
+CommandLine: ""C:\Program Files\Windows Defender\MpCmdRun.exe"" SignatureUpdate -ScheduleJob -RestrictPrivileges -Reinvoke
+CurrentDirectory: C:\Windows\system32\
+User: NT AUTHORITY\NETWORK SERVICE
+LogonGuid: {fb54b6e3-cf0d-6ad6-e403-000000000000}
+LogonId: 0x3E4
+TerminalSessionId: 0
+IntegrityLevel: System
+Hashes: SHA256=1CD644B750884906B707419C8F40598C04F1402E4E93CBF4A33F3254846DC870
+ParentProcessGuid: {fb54b6e3-218f-6ad6-b700-000000000400}
+ParentProcessId: 4548
+ParentImage: C:\Program Files\Windows Defender\MpCmdRun.exe
+ParentCommandLine: ""C:\Program Files\Windows Defender\MpCmdRun.exe"" SignatureUpdate -ScheduleJob -RestrictPrivileges
+ParentUser: NT AUTHORITY\SYSTEM"
+"10/19/2026 6:56:31 AM","1","Information","Process Create:
+RuleName: -
+UtcTime: 2026-10-19 13:56:31.419
+ProcessGuid: {fb54b6e3-218f-6ad6-b800-000000000400}
+ProcessId: 1472
+Image: C:\Windows\System32\conhost.exe
+FileVersion: 10.0.20348.558 (WinBuild.160101.0800)
+Description: Console Window Host
+Product: Microsoft? Windows? Operating System
+Company: Microsoft Corporation
+OriginalFileName: CONHOST.EXE
+CommandLine: \??\C:\Windows\system32\conhost.exe 0xffffffff -ForceV1
+CurrentDirectory: C:\Windows
+User: NT AUTHORITY\SYSTEM
+LogonGuid: {fb54b6e3-cf0b-6ad6-e703-000000000000}
+LogonId: 0x3E7
+TerminalSessionId: 0
+IntegrityLevel: System
+Hashes: SHA256=6B481D656414C50D8BD0BEDCD615AEAF2F5F68576CB6732A9548E0DA87729733
+ParentProcessGuid: {fb54b6e3-218f-6ad6-b700-000000000400}
+ParentProcessId: 4548
+ParentImage: C:\Program Files\Windows Defender\MpCmdRun.exe
+ParentCommandLine: ""C:\Program Files\Windows Defender\MpCmdRun.exe"" SignatureUpdate -ScheduleJob -RestrictPrivileges
+ParentUser: NT AUTHORITY\SYSTEM"
+"10/19/2026 6:56:31 AM","1","Information","Process Create:
+RuleName: -
+UtcTime: 2026-10-19 13:56:31.394
+ProcessGuid: {fb54b6e3-218f-6ad6-b700-000000000400}
+ProcessId: 4548
+Image: C:\Program Files\Windows Defender\MpCmdRun.exe
+FileVersion: 4.18.2104.5 (WinBuild.160101.0800)
+Description: Microsoft Malware Protection Command Line Utility
+Product: Microsoft? Windows? Operating System
+Company: Microsoft Corporation
+OriginalFileName: MpCmdRun.exe
+CommandLine: ""C:\Program Files\Windows Defender\MpCmdRun.exe"" SignatureUpdate -ScheduleJob -RestrictPrivileges
+CurrentDirectory: C:\Windows\system32\
+User: NT AUTHORITY\SYSTEM
+LogonGuid: {fb54b6e3-cf0b-6ad6-e703-000000000000}
+LogonId: 0x3E7
+TerminalSessionId: 0
+IntegrityLevel: System
+Hashes: SHA256=1CD644B750884906B707419C8F40598C04F1402E4E93CBF4A33F3254846DC870
+ParentProcessGuid: {fb54b6e3-1f12-6ad6-3e00-000000000400}
+ParentProcessId: 2324
+ParentImage: C:\Program Files\Windows Defender\MsMpEng.exe
+ParentCommandLine: ""C:\Program Files\Windows Defender\MsMpEng.exe""
+ParentUser: NT AUTHORITY\SYSTEM"
+"10/19/2026 6:56:22 AM","5","Information","Process terminated:
+RuleName: -
+UtcTime: 2026-10-19 13:56:22.917
+ProcessGuid: {fb54b6e3-1f12-6ad6-3500-000000000400}
+ProcessId: 2132
+Image: C:\Windows\System32\svchost.exe
+User: NT AUTHORITY\LOCAL SERVICE"
+"10/19/2026 6:56:07 AM","5","Information","Process terminated:
+RuleName: -
+UtcTime: 2026-10-19 13:56:07.213
+ProcessGuid: {fb54b6e3-1f7c-6ad6-6800-000000000400}
+ProcessId: 4740
+Image: C:\Windows\System32\smartscreen.exe
+User: WIN-52LLRI1KBG7\Administrator"
+"10/19/2026 6:55:35 AM","1","Information","Process Create:
+RuleName: -
+UtcTime: 2026-10-19 13:55:35.022
+ProcessGuid: {fb54b6e3-2157-6ad6-b600-000000000400}
+ProcessId: 4848
+Image: C:\Windows\System32\notepad.exe
+FileVersion: 10.0.20348.1 (WinBuild.160101.0800)
+Description: Notepad
+Product: Microsoft? Windows? Operating System
+Company: Microsoft Corporation
+OriginalFileName: NOTEPAD.EXE
+CommandLine: ""C:\Windows\system32\notepad.exe"" 
+CurrentDirectory: C:\Users\Administrator\Downloads\Sysmon\
+User: WIN-52LLRI1KBG7\Administrator
+LogonGuid: {fb54b6e3-1f68-6ad6-946f-020000000000}
+LogonId: 0x26F94
+TerminalSessionId: 1
+IntegrityLevel: High
+Hashes: SHA256=B65079972E88691FE19B5D4D5EB3159F6CD627FB6C4F09AE9B9DF959330082DF
+ParentProcessGuid: {fb54b6e3-204d-6ad6-9300-000000000400}
+ParentProcessId: 2032
+ParentImage: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+ParentCommandLine: ""C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe"" 
+ParentUser: WIN-52LLRI1KBG7\Administrator"
+"10/19/2026 6:55:29 AM","5","Information","Process terminated:
+RuleName: -
+UtcTime: 2026-10-19 13:55:29.570
+ProcessGuid: {fb54b6e3-2126-6ad6-b400-000000000400}
+ProcessId: 4368
+Image: C:\Windows\System32\svchost.exe
+User: WIN-52LLRI1KBG7\Administrator"
+"10/19/2026 6:55:29 AM","5","Information","Process terminated:
+RuleName: -
+UtcTime: 2026-10-19 13:55:29.563
+ProcessGuid: {fb54b6e3-2126-6ad6-b300-000000000400}
+ProcessId: 5076
+Image: C:\Windows\System32\RuntimeBroker.exe
+User: WIN-52LLRI1KBG7\Administrator"
+"10/19/2026 6:54:52 AM","5","Information","Process terminated:
+RuleName: -
+UtcTime: 2026-10-19 13:54:52.875
+ProcessGuid: {fb54b6e3-2125-6ad6-b200-000000000400}
+ProcessId: 4800
+Image: C:\Windows\SystemApps\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\ScreenClippingHost.exe
+User: WIN-52LLRI1KBG7\Administrator"
+"10/19/2026 6:54:52 AM","1","Information","Process Create:
+RuleName: -
+UtcTime: 2026-10-19 13:54:52.387
+ProcessGuid: {fb54b6e3-212c-6ad6-b500-000000000400}
+ProcessId: 4584
+Image: C:\Windows\System32\svchost.exe
+FileVersion: 10.0.20348.558 (WinBuild.160101.0800)
+Description: Host Process for Windows Services
+Product: Microsoft? Windows? Operating System
+Company: Microsoft Corporation
+OriginalFileName: svchost.exe
+CommandLine: C:\Windows\System32\svchost.exe -k LocalSystemNetworkRestricted -p -s DsSvc
+CurrentDirectory: C:\Windows\system32\
+User: NT AUTHORITY\SYSTEM
+LogonGuid: {fb54b6e3-cf0b-6ad6-e703-000000000000}
+LogonId: 0x3E7
+TerminalSessionId: 0
+IntegrityLevel: System
+Hashes: SHA256=31780FF2AAF7BC71F755BA0E4FEF1D61B060D1D2741EAFB33CBAB44D889595A0
+ParentProcessGuid: {00000000-0000-0000-0000-000000000000}
+ParentProcessId: 664
+ParentImage: -
+ParentCommandLine: -
+ParentUser: -"
+"10/19/2026 6:54:46 AM","1","Information","Process Create:
+RuleName: -
+UtcTime: 2026-10-19 13:54:46.448
+ProcessGuid: {fb54b6e3-2126-6ad6-b400-000000000400}
+ProcessId: 4368
+Image: C:\Windows\System32\svchost.exe
+FileVersion: 10.0.20348.558 (WinBuild.160101.0800)
+Description: Host Process for Windows Services
+Product: Microsoft? Windows? Operating System
+Company: Microsoft Corporation
+OriginalFileName: svchost.exe
+CommandLine: C:\Windows\system32\svchost.exe -k LocalService -p -s CaptureService
+CurrentDirectory: C:\Windows\system32\
+User: WIN-52LLRI1KBG7\Administrator
+LogonGuid: {fb54b6e3-1f68-6ad6-946f-020000000000}
+LogonId: 0x26F94
+TerminalSessionId: 1
+IntegrityLevel: High
+Hashes: SHA256=31780FF2AAF7BC71F755BA0E4FEF1D61B060D1D2741EAFB33CBAB44D889595A0
+ParentProcessGuid: {00000000-0000-0000-0000-000000000000}
+ParentProcessId: 664
+ParentImage: -
+ParentCommandLine: -
+ParentUser: -"
+"10/19/2026 6:54:46 AM","1","Information","Process Create:
+RuleName: -
+UtcTime: 2026-10-19 13:54:46.364
+ProcessGuid: {fb54b6e3-2126-6ad6-b300-000000000400}
+ProcessId: 5076
+Image: C:\Windows\System32\RuntimeBroker.exe
+FileVersion: 10.0.20348.1 (WinBuild.160101.0800)
+Description: Runtime Broker
+Product: Microsoft? Windows? Operating System
+Company: Microsoft Corporation
+OriginalFileName: RuntimeBroker.exe
+CommandLine: C:\Windows\System32\RuntimeBroker.exe -Embedding
+CurrentDirectory: C:\Windows\system32\
+User: WIN-52LLRI1KBG7\Administrator
+LogonGuid: {fb54b6e3-1f68-6ad6-946f-020000000000}
+LogonId: 0x26F94
+TerminalSessionId: 1
+IntegrityLevel: High
+Hashes: SHA256=91932960C0ED923CC0204B3661B4807BBDC314C6652EA7E6016D96CE36C5D765
+ParentProcessGuid: {00000000-0000-0000-0000-000000000000}
+ParentProcessId: 796
+ParentImage: -
+ParentCommandLine: -
+ParentUser: -"
+"10/19/2026 6:54:45 AM","1","Information","Process Create:
+RuleName: -
+UtcTime: 2026-10-19 13:54:45.971
+ProcessGuid: {fb54b6e3-2125-6ad6-b200-000000000400}
+ProcessId: 4800
+Image: C:\Windows\SystemApps\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\ScreenClippingHost.exe
+FileVersion: 2010.1012.0.10351
+Description: -
+Product: Microsoft? Windows? Operating System
+Company: Microsoft Corporation
+OriginalFileName: ScreenClippingHost.exe
+CommandLine: ""C:\Windows\SystemApps\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\ScreenClippingHost.exe"" -ServerName:ScreenClipping.AppX6726kd2wrry6c6n8nc57a1zn08dmzmbt.mca
+CurrentDirectory: C:\Windows\SystemApps\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\
+User: WIN-52LLRI1KBG7\Administrator
+LogonGuid: {fb54b6e3-1f68-6ad6-946f-020000000000}
+LogonId: 0x26F94
+TerminalSessionId: 1
+IntegrityLevel: AppContainer
+Hashes: SHA256=69A06B2C7B8DE4E247546DFDFB45ED4F9B2051BC8FF842E88CCD972638C76C5A
+ParentProcessGuid: {00000000-0000-0000-0000-000000000000}
+ParentProcessId: 796
+ParentImage: -
+ParentCommandLine: -
+ParentUser: -"
+"10/19/2026 6:54:34 AM","5","Information","Process terminated:
+RuleName: -
+UtcTime: 2026-10-19 13:54:34.789
+ProcessGuid: {fb54b6e3-2071-6ad6-9e00-000000000400}
+ProcessId: 648
+Image: C:\Windows\System32\svchost.exe
+User: NT AUTHORITY\SYSTEM"
+"10/19/2026 6:54:21 AM","5","Information","Process terminated:
+RuleName: -
+UtcTime: 2026-10-19 13:54:21.858
+ProcessGuid: {fb54b6e3-2109-6ad6-aa00-000000000400}
+ProcessId: 2504
+Image: C:\Users\Administrator\Downloads\Sysmon\Sysmon64.exe
+User: WIN-52LLRI1KBG7\Administrator"
+"10/19/2026 6:54:21 AM","1","Information","Process Create:
+RuleName: -
+UtcTime: 2026-10-19 13:54:21.140
+ProcessGuid: {fb54b6e3-210d-6ad6-b100-000000000400}
+ProcessId: 2916
+Image: C:\Windows\System32\wbem\unsecapp.exe
+FileVersion: 10.0.20348.1 (WinBuild.160101.0800)
+Description: Sink to receive asynchronous callbacks for WMI client application
+Product: Microsoft? Windows? Operating System
+Company: Microsoft Corporation
+OriginalFileName: unsecapp.dll
+CommandLine: C:\Windows\system32\wbem\unsecapp.exe -Embedding
+CurrentDirectory: C:\Windows\system32\
+User: NT AUTHORITY\SYSTEM
+LogonGuid: {fb54b6e3-cf0b-6ad6-e703-000000000000}
+LogonId: 0x3E7
+TerminalSessionId: 0
+IntegrityLevel: System
+Hashes: SHA256=D568D1C238424226EC0B87E726A6BB4789997BB1466EE7EC93EB0CC196F2E41C
+ParentProcessGuid: {00000000-0000-0000-0000-000000000000}
+ParentProcessId: 796
+ParentImage: -
+ParentCommandLine: -
+ParentUser: -"
+"10/19/2026 6:54:21 AM","1","Information","Process Create:
+RuleName: -
+UtcTime: 2026-10-19 13:54:21.087
+ProcessGuid: {fb54b6e3-210d-6ad6-b000-000000000400}
+ProcessId: 2692
+Image: C:\Windows\Sysmon64.exe
+FileVersion: 15.22
+Description: System activity monitor
+Product: Sysinternals Sysmon
+Company: Sysinternals - www.sysinternals.com
+OriginalFileName: -
+CommandLine: C:\Windows\Sysmon64.exe
+CurrentDirectory: C:\Windows\system32\
+User: NT AUTHORITY\SYSTEM
+LogonGuid: {fb54b6e3-cf0b-6ad6-e703-000000000000}
+LogonId: 0x3E7
+TerminalSessionId: 0
+IntegrityLevel: System
+Hashes: SHA256=83D31F2478DC6716CFDBF69E5C384BF043072B5F0D8D7B2EEA365F709FDA4352
+ParentProcessGuid: {00000000-0000-0000-0000-000000000000}
+ParentProcessId: 664
+ParentImage: -
+ParentCommandLine: -
+ParentUser: -"
+"10/19/2026 6:54:21 AM","4","Information","Sysmon service state changed:
+UtcTime: 2026-10-19 13:54:21.203
+State: Started
+Version: 15.22
+SchemaVersion: 4.91"
+"10/19/2026 6:54:21 AM","16","Information","Sysmon config state changed:
+UtcTime: 2026-10-19 13:54:21.053
+Configuration: ""C:\Users\Administrator\Downloads\Sysmon\Sysmon64.exe"" -i
+ConfigurationFileHash: -"
