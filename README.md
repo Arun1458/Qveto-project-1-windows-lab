@@ -104,4 +104,4 @@ Only mark evidence as collected after the corresponding screenshot has been capt
 
 ---
 
-**Current status:** The two VMs are communicating over the intended lab network, and both ping directions have succeeded; complete isolation and the full security baseline have been confirmed.
+**Current status:** Windows 11 and Kali Linux have been configured for the intended lab network, and bidirectional ICMP connectivity has been demonstrated. Final verification of all enabled network adapters, routing, gateway/DNS settings, and the Windows security baseline remains in progress.
