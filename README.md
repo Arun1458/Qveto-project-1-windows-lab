@@ -36,7 +36,7 @@ All exercises are limited to the authorized virtual machines described in this r
 
 Both VMs are configured to use the VirtualBox Internal Network named `LabNet`.
 
-Kali's lab IP address was assigned manually during setup. Its persistence after a VM restart still needs to be verified.
+Kali's lab IP address was assigned manually during setup.
 
 ## Repository Structure
 
