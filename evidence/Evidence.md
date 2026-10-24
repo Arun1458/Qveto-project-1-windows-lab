@@ -12,13 +12,13 @@ This directory contains screenshots and sanitized configuration evidence support
 
 ### E01 — Windows VM Configuration
 
-Suggested filename: `windows-vm-settings.png`
+Suggested filenames: `windows VM config 1.png` and `windows VM config 2.png`
 
 Show the Windows VM name and relevant CPU, RAM, and storage configuration.
 
 ### E02 — Kali VM Configuration
 
-Suggested filename: `kali-vm-settings.png`
+Suggested filename: `Kali VM config 1.png` and `Kali VM config 2.png`
 
 Show the Kali VM name and relevant CPU, RAM, and storage configuration.
 
@@ -36,7 +36,7 @@ Show Adapter 1 attached to Internal Network LabNet.
 
 ### E05 — Windows IP Configuration
 
-Suggested filename: `windows-ipconfig.png`
+Suggested filename: `windows-ip-config.png`
 
 Show the relevant Windows Ethernet adapter and its IPv4 address.
 
