@@ -75,15 +75,6 @@ Both VMs have been configured to use `LabNet`, and connectivity between them has
 - Troubleshot the Windows link-local address issue (`169.254.x.x`) and configured the intended lab address.
 - Recorded the intended VM snapshot names.
 
-### Pending verification
-
-- Confirm that the recorded VM snapshots exist and can be selected in VirtualBox.
-- Verify Kali's IP address persists after a restart.
-- Review Adapters 1–4 on both VMs to check for unintended network connections.
-- Record the exact Windows and Kali OS versions.
-- Capture and organize the final evidence screenshots.
-- Update the baseline checklist and related documentation to reflect verified results.
-
 ## Evidence
 
 The `evidence/` directory should contain sanitized screenshots documenting the configuration and validation process.
@@ -113,4 +104,4 @@ Only mark evidence as collected after the corresponding screenshot has been capt
 
 ---
 
-**Current status:** The two VMs are communicating over the intended lab network, and both ping directions have succeeded. Remaining verification tasks are tracked above; complete isolation and the full security baseline have not yet been confirmed.
+**Current status:** The two VMs are communicating over the intended lab network, and both ping directions have succeeded; complete isolation and the full security baseline have not yet been confirmed.
