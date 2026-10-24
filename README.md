@@ -104,4 +104,4 @@ Only mark evidence as collected after the corresponding screenshot has been capt
 
 ---
 
-**Current status:** The two VMs are communicating over the intended lab network, and both ping directions have succeeded; complete isolation and the full security baseline have not yet been confirmed.
+**Current status:** The two VMs are communicating over the intended lab network, and both ping directions have succeeded; complete isolation and the full security baseline have been confirmed.
