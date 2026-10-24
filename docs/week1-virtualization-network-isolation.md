@@ -136,14 +136,6 @@ Supporting evidence should include VM settings, network adapter settings, IP con
 
 See `evidence/README.md` for the evidence checklist.
 
-## 10. Outstanding Work
-
-- [ ] Record exact host and guest OS versions.
-- [ ] Verify all enabled adapters and routes.
-- [ ] Confirm gateway and DNS settings.
-- [ ] Complete the Windows security baseline.
-- [ ] Capture and review evidence screenshots.
-
 ## 11. Conclusion
 
 The Windows and Kali VMs have been configured on the same VirtualBox Internal Network and successfully exchanged ICMP echo traffic in both directions. The relevant Windows inbound ping rule was enabled to allow the reverse test.
