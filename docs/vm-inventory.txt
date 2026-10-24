@@ -26,9 +26,11 @@ Prepared by: dhruv-sain-hub
 - Intended default gateway: None
 - Intended DNS: None
 - Snapshot name: windows11-clean-install
-- Defender status: Pending
-- Firewall profile status: Pending
-- Windows Update status: Pending
+- **Virus & threat protection:** Windows Security reports “No action needed.” Real-time protection status: Pending verification.
+- **Windows Defender Firewall — Domain profile:** On.
+- **Windows Defender Firewall — Private profile:** On.
+- **Windows Defender Firewall — Public profile:** On.
+- **Windows Update:** Up to date.
 
 ## 3. Kali Linux Testing VM
 
