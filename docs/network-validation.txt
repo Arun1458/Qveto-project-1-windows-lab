@@ -47,15 +47,24 @@ This confirms that ICMP echo traffic can pass in both directions. It does not in
 
 ## 6. Isolation Review
 
-- [x] Both VMs configured for Internal Network LabNet
-- [x] Both VMs have recorded IPv4 addresses on the same subnet
+- [x] Adapter 1 on both VMs is documented as configured for Internal Network LabNet (E03–E04)
+- [x] Both VMs have recorded IPv4 addresses on the same subnet (E05–E06)
+- [x] VirtualBox adapter states reviewed: Adapter 1 uses LabNet and Adapters 2–4 are disabled on both VMs (E09–E10)
+- [x] Windows has no IPv4 default gateway in the captured route table (E11)
+- [ ] Resolve three IPv6 DNS server entries shown on the Windows Ethernet adapter (E11)
+- [x] Kali route output shows the connected lab subnet and no default route (E12)
+- [ ] Capture Kali resolver output (not shown in E12)
+- [ ] Verify the Kali recovery snapshot state because E13 shows Adapter 1 as NAT while E10 shows LabNet
+- [ ] Complete isolation review documented
 
 ## 7. Evidence Checklist
 
-- [x] Windows `ipconfig` output
-- [x] Kali `ip -4 addr show eth0` output
+- [x] Windows `ipconfig /all` and `route print -4` output (E11)
+- [x] Kali `ip -4 addr show dev eth0` after restart (E12, E16)
 - [x] Successful Windows-to-Kali ping
 - [x] Successful Kali-to-Windows ping
-- [x] Windows and Kali adapter settings
+- [x] Windows and Kali Adapter 1 settings (E03–E04, E09–E10)
+
+The E09–E10 adapter review shows only Adapter 1 enabled on each VM and both connected to LabNet. Windows and Kali route outputs show no default route, but the Windows interface lists three IPv6 DNS server entries, and Kali resolver output is not present. The Kali snapshot details also display NAT, which differs from the current LabNet setting and must be reconciled before relying on that snapshot for recovery. Successful ping tests verify only the tested ICMP paths; complete isolation is not yet confirmed. See `../evidence/README.md` for details.
 
 End of report.

@@ -1,64 +1,41 @@
 # Week 1 — Virtualization and Network Isolation Checklist
 
 Project: Windows Exploitation & Privilege Escalation Lab
-Date: 18-10-2026
-Prepared by: dhruv-sain-hub
+Evidence date: 18 October 2026
+Documentation status reviewed: 31 October 2026
 
-## 1. Virtualization Environment
+`[x]` means documented in the current repository. `[ ]` means not yet verified or not supported by committed evidence. A recorded value is not the same as an independently verified state.
 
-- [x] Oracle VirtualBox installed
-- [x] Windows 11 VM created
-- [x] Kali Linux VM created
-- [x] Windows VM boots successfully
-- [x] Kali VM boots successfully
-- [x] Windows baseline snapshot recorded
-- [x] Kali baseline snapshot recorded
+## Virtualization and connectivity
 
-## 2. Windows VM
+- [x] Windows 11 and Kali VMs are listed and their boot status is recorded.
+- [x] VM names, CPU, RAM, and virtual disk capacities are documented.
+- [x] Adapter 1 for each VM is documented as attached to Internal Network `LabNet`.
+- [x] IPv4 addresses are documented as Windows `10.10.10.20/24` and Kali `10.10.10.10/24`.
+- [x] Windows-to-Kali ICMP test is documented as successful (0% loss).
+- [x] Kali-to-Windows ICMP test is documented as successful (0% loss) after enabling the relevant inbound Windows ICMPv4 Echo Request rule.
+- [x] Screenshots E01–E16 are present and indexed in `evidence/README.md`.
+- [x] VirtualBox adapter review shows only Adapter 1 enabled on each VM; Adapters 2–4 are disabled (E09–E10).
+- [x] Windows guest route output shows no IPv4 default route (E11).
+- [x] Kali IPv4 address `10.10.10.10/24` is shown after restart (E12, E16).
+- [x] Windows and Kali snapshot names are visible in VirtualBox (E13).
+- [x] Windows and Kali guest OS versions are recorded (E14).
+- [x] Windows Security shows no current threats and firewall on for all profiles; Public is active (E15).
 
-- [x] VM name recorded: windows11-lab
-- [x] CPU allocation recorded: 3
-- [x] RAM allocation recorded: 4096 MB
-- [x] Virtual disk capacity recorded: 80.00 GB
-- [x] IPv4 address configured: 10.10.10.20/24
-- [x] Windows snapshot name recorded: windows11-clean-install
-- [x] Windows OS version/build recorded
-- [x] Windows security baseline recorded
+## Pending verification
 
-## 3. Kali VM
+- [ ] Resolve the three IPv6 DNS server entries shown for Windows Ethernet in E11; the design currently expects no DNS on the lab interface.
+- [ ] Add Kali resolver output; E12 shows its address and connected route, but not DNS/resolver configuration.
+- [ ] Reconcile the Kali snapshot details showing Adapter 1 as NAT with the current `LabNet` setting in E10; verify which snapshot state is appropriate for recovery (E13).
+- [ ] Record Windows Update status; it is not shown in E15.
+- [ ] Record the exact host OS version; E14 records guest OS versions only.
+- [ ] Complete and document the isolation review after resolving the DNS and snapshot discrepancies.
 
-- [x] VM name recorded: kali-linux-2026.2-virtualbox-amd64
-- [x] CPU allocation recorded: 2
-- [x] RAM allocation recorded: 2048 MB
-- [x] Virtual disk capacity recorded: 80.09 GB
-- [x] Interface eth0 configured
-- [x] Lab IPv4 address assigned: 10.10.10.10/24
-- [x] Kali snapshot name recorded: kali-clean-install
-- [x] Kali OS version recorded
-- [x] Kali address persistence after restart confirmed
+## Documentation
 
-## 4. Network Configuration
-
-- [x] Windows Adapter 1 uses Internal Network
-- [x] Kali Adapter 1 uses Internal Network
-- [x] Network name matches: LabNet
-- [x] Intended subnet documented: 10.10.10.0/24
-- [x] Windows-to-Kali ping successful
-- [x] Kali-to-Windows ping successful
-- [x] Relevant Windows inbound ICMPv4 Echo Request rule enabled
-- [x] All enabled network adapters reviewed
-- [x] Isolation review completed and documented
-
-## 5. Documentation and Evidence
-
-- [x] README.md completed
-- [x] Main Week 1 report completed
-- [x] Lab design documented
-- [x] Rules of engagement documented
-- [x] VM inventory reviewed
-- [x] Network validation report completed
-- [x] Change log completed
-- [x] Evidence screenshots saved and reviewed
-- [x] Documentation committed to the feature branch
+- [x] README and Week 1 report describe the documented setup and its limits.
+- [x] Lab design, rules of engagement, VM inventory, network validation, and change log are present.
+- [x] Evidence index maps E01–E16 and documents review findings and remaining verification gaps.
+- [ ] Mark Week 1 isolation verification complete only after pending checks are supported by reviewed evidence.
 
 End of checklist.

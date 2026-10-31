@@ -1,13 +1,14 @@
 # Week 1 — Virtual Machine Inventory
 
 Project: Windows Exploitation & Privilege Escalation Lab
-Date: 18-10-2026
+Evidence date: 18-10-2026
+Documentation status reviewed: 31-10-2026
 Prepared by: dhruv-sain-hub
 
 ## 1. Virtualization Environment
 
 - Virtualization software: Oracle VirtualBox 7.2.20
-- Host operating system: Windows; exact version pending
+- Host operating system: Windows; exact version not recorded
 - Virtual network type: Internal Network
 - Internal network name: LabNet
 - IPv4 subnet: 10.10.10.0/24
@@ -24,13 +25,12 @@ Prepared by: dhruv-sain-hub
 - Network name: LabNet
 - IPv4 address: 10.10.10.20/24
 - Intended default gateway: None
-- Intended DNS: None
+- Intended DNS: None; E11 shows three IPv6 link-local DNS server entries on the Ethernet adapter, requiring clarification
+- IPv4 default gateway: None shown in E11
 - Snapshot name: windows11-clean-install
-- **Virus & threat protection:** Windows Security reports “No action needed.” Real-time protection status: Pending verification.
-- **Windows Defender Firewall — Domain profile:** On.
-- **Windows Defender Firewall — Private profile:** On.
-- **Windows Defender Firewall — Public profile:** On.
-- **Windows Update:** Up to date.
+- Defender status: E15 shows no current threats, “No action needed,” and security intelligence marked up to date; real-time protection status is not visible and remains unverified
+- Firewall profile status: E15 shows firewall on for Domain, Private, and active Public profiles
+- Windows Update status: Not shown; verification pending
 
 ## 3. Kali Linux Testing VM
 
@@ -44,8 +44,8 @@ Prepared by: dhruv-sain-hub
 - Network name: LabNet
 - Network interface: eth0
 - IPv4 address: 10.10.10.10/24
-- Intended default gateway: None
-- Intended DNS: None
+- Default route: None shown in E12 route output
+- Intended DNS: None; resolver configuration not captured in E12
 - Snapshot name: kali-clean-install
 
 ## 4. Network Inventory
@@ -68,28 +68,23 @@ Prepared by: dhruv-sain-hub
 - Snapshot: windows11-clean-install
 - Purpose: Clean installation recovery point
 - Recorded date: 18-10-2026
-- Availability: Recorded; verify in VirtualBox before restoration
+- Availability: E13 confirms `windows11-clean-install` exists; screenshot also shows child snapshot `w1-network-verified`
 
 ### Kali Linux
 
 - Snapshot: kali-clean-install
 - Purpose: Baseline recovery point
 - Recorded date: 17-10-2026
-- Availability: Recorded; verify in VirtualBox before restoration
+- Availability: E13 confirms `kali-clean-install` exists and shows child snapshot `w1-network-verified`; details image displays Adapter 1 as NAT, so verify which snapshot state is shown and ensure the recovery point used for this lab does not restore NAT unintentionally
 
 ## 6. Verification Status
 
-- [x] VM names and resource allocations recorded
-- [x] Network name recorded for both VMs
-- [x] IPv4 addresses recorded
-- [x] Snapshot names recorded
-- [x] Bidirectional ping tests successful
-- [x] All network adapters reviewed
-- [x] Kali address persistence after restart confirmed
-- [x] Windows security baseline recorded
+E09–E10 document Adapter 1 on LabNet and Adapters 2–4 disabled on both VMs. E11–E12 and E16 document the network details and post-restart Kali address, with evidence limits and discrepancies recorded in `../evidence/README.md`.
+
+Still open: Windows IPv6 DNS entries, Kali resolver output, the Kali snapshot’s displayed NAT attachment, Windows Update status, and the exact host OS version. Track these in `baseline-checklist.txt` and update this inventory after review.
 
 ## 7. Notes
 
-Update this inventory whenever VM resources, network adapters, addresses, or snapshots change. Do not record passwords or other secrets.
+Update this inventory whenever VM resources, network adapters, addresses, or snapshots change. Do not record passwords or other secrets. A recorded intended setting should not be described as verified until supporting evidence has been reviewed.
 
 End of inventory.

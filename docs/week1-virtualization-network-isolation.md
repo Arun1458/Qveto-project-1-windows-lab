@@ -2,7 +2,8 @@
 
 **Project:** Windows Exploitation & Privilege Escalation Lab
 **Prepared by:** dhruv-sain-hub
-**Date:** 18 October 2026
+**Evidence date:** 18 October 2026
+**Documentation status reviewed:** 31 October 2026
 **Virtualization platform:** Oracle VirtualBox 7.2.20
 
 ## 1. Objective
@@ -28,8 +29,8 @@ Exploitation and privilege escalation exercises are outside the scope of Week 1.
 | ------------------------ | ------------------------------ |
 | Virtualization software  | Oracle VirtualBox 7.2.20       |
 | Host operating system    | Windows; windows 11 (64bit)    |
-| Target operating system  | Windows 11                     |
-| Testing operating system | Kali Linux                     |
+| Target operating system  | Windows 11 Pro, Version 26H2, OS Build 26300.9457 (E14) |
+| Testing operating system | Kali Linux 2026.2, kernel 6.19.14+kali-amd64 (E14) |
 | Network type             | Internal Network               |
 | Network name             | LabNet                         |
 
@@ -118,7 +119,7 @@ The following snapshot names have been recorded:
 - Windows: `windows11-clean-install`
 - Kali: `kali-clean-install`
 
-These snapshots are intended to preserve baseline states for recovery. Verify their availability in VirtualBox before making significant changes.
+E13 confirms the named snapshots exist. It also shows a child snapshot named `w1-network-verified` for each VM. The Kali snapshot details image displays Adapter 1 as NAT, while the current adapter settings show LabNet (E10). Verify which snapshot the details describe and ensure the recovery state used for this lab does not restore NAT unintentionally.
 
 ## 8. Isolation Requirements
 
@@ -134,12 +135,21 @@ These snapshots are intended to preserve baseline states for recovery. Verify th
 
 Supporting evidence should include VM settings, network adapter settings, IP configuration, successful ping results, and snapshot listings.
 
-See `evidence/README.md` for the evidence checklist.
+See [`evidence/README.md`](../evidence/README.md) for the evidence index and outstanding verification evidence.
+
+## 10. Outstanding Work
+
+- [ ] Record the exact host OS version; guest versions are recorded in E14.
+- [x] Review enabled/disabled status and attachment for Adapters 1–4 on both VMs (E09–E10).
+- [ ] Resolve the Windows IPv6 DNS entries and capture Kali resolver settings (E11–E12).
+- [x] Confirm the named snapshots exist; verify the Kali snapshot’s NAT detail before relying on it for isolated recovery (E13).
+- [ ] Record Windows Update status (E15 shows Defender and firewall status only).
+- [x] Capture and index the current configuration, connectivity, and baseline evidence (E01–E16); open items are listed in `evidence/README.md`.
 
 ## 11. Conclusion
 
 The Windows and Kali VMs have been configured on the same VirtualBox Internal Network and successfully exchanged ICMP echo traffic in both directions. The relevant Windows inbound ping rule was enabled to allow the reverse test.
 
-The lab is ready for the remaining Week 1 verification and documentation tasks. Further exercises should begin only after the isolation review and baseline checks are complete.
+The documented setup and bidirectional ICMP validation are complete for this report. E09–E10 show the current VirtualBox adapter configuration; E11–E12 and E16 add guest network evidence, and E13–E15 add snapshot, OS, and partial Windows security evidence. Windows has IPv6 DNS entries despite the design’s no-DNS intention, Kali resolver output is missing, and the Kali snapshot details show NAT. Windows Update and the exact host OS version are also undocumented. Do not treat this report as confirmation of complete isolation until these items are resolved.
 
 End of report.

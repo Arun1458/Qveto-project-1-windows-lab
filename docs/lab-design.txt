@@ -1,7 +1,8 @@
 # Lab Design — Virtualization and Network Isolation
 
 Project: Windows Exploitation & Privilege Escalation Lab  
-Date: 18-10-2026  
+Evidence date: 18-10-2026
+Documentation status reviewed: 31-10-2026
 Prepared by: dhruv-sain-hub
 
 ## 1. Purpose
@@ -61,8 +62,8 @@ Subnet: 10.10.10.0/24
 | Kali | 10.10.10.10/24 |
 | Network attachment | Internal Network |
 | Network name | LabNet |
-| Default gateway | None intended |
-| DNS | None intended |
+| Default gateway | None intended; Windows capture shows no IPv4 default route |
+| DNS | None intended; Windows capture shows three IPv6 link-local DNS entries requiring clarification |
 | DHCP | Not configured |
 
 ## 6. Isolation Design
@@ -75,7 +76,10 @@ The lab should not be considered fully isolated until all enabled adapters, rout
 
 - Windows-to-Kali ping: Successful, 0% packet loss.
 - Kali-to-Windows ping: Successful, 0% packet loss after enabling the relevant Windows inbound ICMPv4 Echo Request rule.
-- Full adapter and route review: Pending confirmation.
+- E09–E10 show Adapter 1 on LabNet and Adapters 2–4 disabled on both VMs.
+- E11 shows no Windows IPv4 default route, but lists three IPv6 DNS server entries. E12 shows Kali's connected route and no default route; Kali resolver output remains unverified.
+- E13 confirms the named snapshots exist; the Kali snapshot details display Adapter 1 as NAT, so verify the relevant snapshot state before using it for lab recovery.
+- E12/E16 show Kali's address after restart. E14 records guest OS versions. E15 shows Defender and firewall status, but not Windows Update status.
 
 ## 8. Recovery
 
@@ -84,10 +88,10 @@ The recorded baseline snapshots are:
 - windows11-clean-install
 - kali-clean-install
 
-Verify snapshot availability before making significant changes.
+Snapshot existence is confirmed in E13. Before relying on the Kali snapshot for isolated recovery, reconcile its displayed NAT adapter setting with the current LabNet configuration.
 
 ## 9. Conclusion
 
-The lab architecture consists of two virtual machines communicating over the Internal Network LabNet. The configured addresses and successful ping tests demonstrate bidirectional ICMP connectivity. Isolation review remains a separate verification requirement.
+The documented lab architecture consists of two virtual machines communicating over the Internal Network LabNet. The recorded addresses and successful ping tests demonstrate bidirectional ICMP connectivity. They do not establish complete isolation; see `../evidence/README.md` and `baseline-checklist.txt` for the remaining verification work.
 
 End of lab design.

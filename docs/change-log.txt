@@ -40,4 +40,19 @@ Prepared by: dhruv-sain-hub
 - Outcome: Windows-to-Kali and Kali-to-Windows ping tests succeeded with 0% packet loss.
 - Security note: Windows Firewall remained enabled.
 
+## Entry 5 — Kali Address Persistence and Additional Evidence Review
+
+- Date: 31-10-2026
+- Component: Kali Linux VM
+- Change: Configured the `Wired connection 1` NetworkManager profile with the static lab address `10.10.10.10/24`, no gateway, and no DNS; enabled autoconnect.
+- Verification: After a restart, `eth0` retained `10.10.10.10/24`; the route table showed the connected `10.10.10.0/24` route and no default route (E12, E16).
+- Outcome: Kali address persistence is documented.
+
+## Entry 6 — Supplemental Evidence Review
+
+- Date: 31-10-2026
+- Components: Windows 11 VM, Kali Linux VM, VirtualBox
+- Evidence added: Adapter review (E09–E10), Windows route and interface output (E11), Kali address and route output (E12), snapshot views (E13), guest OS versions (E14), partial Windows security status (E15), and post-restart Kali address (E16).
+- Findings: Windows Ethernet output lists three IPv6 DNS servers despite the no-DNS design; Kali snapshot details display Adapter 1 as NAT while current settings show LabNet; Windows Update status is not captured. These items remain open in the baseline checklist.
+
 End of change log.

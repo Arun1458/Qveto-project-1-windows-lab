@@ -34,9 +34,9 @@ All exercises are limited to the authorized virtual machines described in this r
 | Windows 11 (`windows11-lab`)                      | `10.10.10.20/24` | 3 vCPUs, 4096 MB RAM, 80 GB virtual disk               | Authorized lab target    |
 | Kali Linux (`kali-linux-2026.2-virtualbox-amd64`) | `10.10.10.10/24` | 2 vCPUs, 2048 MB RAM, approximately 80 GB virtual disk | Testing and verification |
 
-Both VMs are configured to use the VirtualBox Internal Network named `LabNet`.
+E09–E10 show both VMs using the VirtualBox Internal Network named `LabNet` on Adapter 1, with Adapters 2–4 disabled. Kali's address is persistent after restart (E12, E16). Some network and recovery checks remain open, as summarized below.
 
-Kali's lab IP address was assigned manually during setup.
+Kali's lab IP address was initially assigned manually, then configured in its NetworkManager profile. E12 and E16 show `10.10.10.10/24` after restart.
 
 ## Repository Structure
 
@@ -47,7 +47,8 @@ Kali's lab IP address was assigned manually during setup.
 - `docs/network-validation.txt` — Connectivity tests and results
 - `docs/change-log.txt` — Configuration changes and troubleshooting history
 - `docs/week1-virtualization-network-isolation.md` — Week 1 setup report
-- `evidence/` — Sanitized screenshots and test evidence
+- `evidence/README.md` — Evidence index, review findings, and open evidence items
+- `evidence/screenshots/` — VM, adapter, IP configuration, and connectivity screenshots
 
 ## Network Configuration and Isolation
 
@@ -58,7 +59,7 @@ The lab network uses a VirtualBox Internal Network named `LabNet` with the inten
 | Windows 11 | `10.10.10.20/24`  | `255.255.255.0` |
 | Kali Linux | `10.10.10.10/24`  | `255.255.255.0` |
 
-The intended configuration has no default gateway or DNS server on the lab interfaces.
+The intended configuration has no default gateway or DNS server on the lab interfaces. E11 shows no IPv4 default gateway on Windows, but it also shows three IPv6 link-local DNS server entries; their origin needs clarification. E12 shows Kali's persistent address and connected subnet route with no default route; resolver output is still needed.
 
 Both VMs have been configured to use `LabNet`, and connectivity between them has been tested successfully. A complete isolation review—including checking all VM adapters and routing configuration—remains necessary before claiming that the environment has been fully verified as isolated.
 
@@ -75,22 +76,15 @@ Both VMs have been configured to use `LabNet`, and connectivity between them has
 - Troubleshot the Windows link-local address issue (`169.254.x.x`) and configured the intended lab address.
 - Recorded the intended VM snapshot names.
 
+### Pending verification
+
+- Resolve the IPv6 DNS entries shown on the Windows lab interface and capture Kali resolver details.
+- Reconcile the Kali snapshot details showing Adapter 1 as NAT with the current `LabNet` configuration before relying on that snapshot for recovery.
+- Record Windows Update status and the host OS version.
+
 ## Evidence
 
-The `evidence/` directory should contain sanitized screenshots documenting the configuration and validation process.
-
-Suggested evidence files:
-
-- `windows-vm-settings.png`
-- `kali-vm-settings.png`
-- `windows-network-settings.png`
-- `kali-network-settings.png`
-- `windows-ipconfig.png`
-- `kali-ip-config.png`
-- `ping-windows-to-kali.png`
-- `ping-kali-to-windows.png`
-
-Only mark evidence as collected after the corresponding screenshot has been captured and checked.
+See [`evidence/README.md`](evidence/README.md) for the screenshots currently committed and the remaining evidence needed to close verification gaps. Remove personal or sensitive information before sharing screenshots.
 
 ## Safety and Rules of Engagement
 
@@ -104,4 +98,4 @@ Only mark evidence as collected after the corresponding screenshot has been capt
 
 ---
 
-**Current status:** Windows 11 and Kali Linux have been configured for the intended lab network, and bidirectional ICMP connectivity has been demonstrated. Final verification of all enabled network adapters, routing, gateway/DNS settings, and the Windows security baseline remains in progress.
+**Current status (31 October 2026):** The repository includes screenshots documenting successful bidirectional ping tests, all VM adapter states, the guest OS versions, named snapshots, Kali's post-restart address, and parts of the Windows security status. Review findings and open items are tracked in [`evidence/README.md`](evidence/README.md) and the baseline checklist. Windows shows IPv6 DNS entries contrary to the design, and the Kali snapshot details show NAT while the current VM adapter is on LabNet. Complete isolation has not been confirmed. This Week 1 branch documents setup and connectivity; future controlled security exercises are outside its completed scope.
