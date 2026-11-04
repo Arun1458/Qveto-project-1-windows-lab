@@ -8,6 +8,11 @@
 ## 1. Executive Summary
 This report documents the final validation phase of the vulnerability assessment lifecycle. Following the defensive monitoring (Week 3) and remediation application by M6, M3 re-executed the original Week 2 baseline non-destructive audit commands. The objective is to verify that all identified privilege escalation vectors have been successfully closed without degrading baseline functionality.
 
+## 1.5 Testing Environment & OVA Methodology
+The final validation phase is executed strictly against the remediated `.ova` appliance provided by the Remediation Lead (M6). 
+* **Hypervisor Engine:** Oracle VirtualBox 
+* **Network Isolation:** `LabNet` (Internal Network) 
+* **Methodology:** The original non-destructive M3 audit commands (from Week 2) are re-executed locally on the patched appliance. The objective is to ensure the privilege escalation vectors are mitigated without causing regression to baseline system operations.
 ## 2. Retest Results & Validation Matrix
 
 | Finding ID | Vulnerability / Misconfiguration | Retest Audit Command Used | Post-Remediation Observation | Final Status |
