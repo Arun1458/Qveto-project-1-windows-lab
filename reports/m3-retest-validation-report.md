@@ -25,4 +25,4 @@ The final validation phase is executed strictly against the remediated `.ova` ap
 | **FIND-06** | Windows Installer Elevation Policy | `reg query HKLM\SOFTWARE\Policies\...` | Pending M6 Fix Application | Pending Retest |
 
 ## 3. Final Assessment Conclusion
-*(To be completed once all "Pending Retest" items are verified as Pass/Fail based on M6's remediation log.)*
+*(Pending execution: Final sign-off will be provided upon completion of the local OVA retest audit to confirm that M6's remediation efforts have fully secured the previously vulnerable privilege escalation vectors.)*
