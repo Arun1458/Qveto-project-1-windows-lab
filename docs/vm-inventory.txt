@@ -2,7 +2,7 @@
 
 Project: Windows Exploitation & Privilege Escalation Lab
 Evidence date: 18-10-2026
-Documentation status reviewed: 31-10-2026
+Documentation status reviewed: 11-11-2026
 Prepared by: dhruv-sain-hub
 
 ## 1. Virtualization Environment
@@ -25,12 +25,12 @@ Prepared by: dhruv-sain-hub
 - Network name: LabNet
 - IPv4 address: 10.10.10.20/24
 - Intended default gateway: None
-- Intended DNS: None; E11 shows three IPv6 link-local DNS server entries on the Ethernet adapter, requiring clarification
+- Intended DNS: None; E11 lists three values in deprecated IPv6 site-local range `fec0::/10`; determine whether they are configured or fallback values
 - IPv4 default gateway: None shown in E11
 - Snapshot name: windows11-clean-install
 - Defender status: E15 shows no current threats, “No action needed,” and security intelligence marked up to date; real-time protection status is not visible and remains unverified
 - Firewall profile status: E15 shows firewall on for Domain, Private, and active Public profiles
-- Windows Update status: Not shown; verification pending
+- Windows Update status: Previously recorded in the branch as “Up to date”; no supporting screenshot is present in E15, so reconfirm the current status
 
 ## 3. Kali Linux Testing VM
 
@@ -81,7 +81,7 @@ Prepared by: dhruv-sain-hub
 
 E09–E10 document Adapter 1 on LabNet and Adapters 2–4 disabled on both VMs. E11–E12 and E16 document the network details and post-restart Kali address, with evidence limits and discrepancies recorded in `../evidence/README.md`.
 
-Still open: Windows IPv6 DNS entries, Kali resolver output, the Kali snapshot’s displayed NAT attachment, Windows Update status, and the exact host OS version. Track these in `baseline-checklist.txt` and update this inventory after review.
+Still open: whether the Windows IPv6 DNS values are configured or fallback values (E17), Kali resolver output (E18), the Kali snapshot’s displayed NAT attachment (E19), current Windows Update and Defender real-time protection status (E20–E21), and the exact host OS version (E22). Track these in `baseline-checklist.txt` and update this inventory after review.
 
 ## 7. Notes
 

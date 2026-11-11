@@ -53,6 +53,13 @@ Prepared by: dhruv-sain-hub
 - Date: 31-10-2026
 - Components: Windows 11 VM, Kali Linux VM, VirtualBox
 - Evidence added: Adapter review (E09–E10), Windows route and interface output (E11), Kali address and route output (E12), snapshot views (E13), guest OS versions (E14), partial Windows security status (E15), and post-restart Kali address (E16).
-- Findings: Windows Ethernet output lists three IPv6 DNS servers despite the no-DNS design; Kali snapshot details display Adapter 1 as NAT while current settings show LabNet; Windows Update status is not captured. These items remain open in the baseline checklist.
+- Findings: Windows Ethernet output lists three DNS values in deprecated IPv6 site-local range `fec0::/10`; their configured or fallback status is unverified. Kali snapshot details display Adapter 1 as NAT while current settings show LabNet. Windows Update was previously recorded as up to date but has no current screenshot; Defender real-time status and host OS version also lack evidence. These items remain open in the baseline checklist.
+
+## Entry 7 — Documentation Reconciliation
+
+- Date: 11-11-2026
+- Components: README, Week 1 reports, VM inventory, evidence index, and baseline checklist
+- Change: Updated the documentation review date, preserved the earlier Windows Update status as an unverified prior record, corrected the classification of `fec0::/10` as deprecated site-local IPv6 space, and assigned evidence IDs to the remaining checks.
+- Outcome: Documentation reflects the evidence currently in the branch and clearly identifies the items that still need fresh verification.
 
 End of change log.

@@ -2,6 +2,7 @@
 
 Project: Windows Exploitation & Privilege Escalation Lab
 Date: 18-10-2026
+Documentation status reviewed: 11-11-2026
 Prepared by: dhruv-sain-hub
 
 ## 1. Objective
@@ -51,10 +52,10 @@ This confirms that ICMP echo traffic can pass in both directions. It does not in
 - [x] Both VMs have recorded IPv4 addresses on the same subnet (E05–E06)
 - [x] VirtualBox adapter states reviewed: Adapter 1 uses LabNet and Adapters 2–4 are disabled on both VMs (E09–E10)
 - [x] Windows has no IPv4 default gateway in the captured route table (E11)
-- [ ] Resolve three IPv6 DNS server entries shown on the Windows Ethernet adapter (E11)
+- [ ] Determine whether the Windows DNS values in deprecated IPv6 site-local range `fec0::/10` are configured or fallback values (E17)
 - [x] Kali route output shows the connected lab subnet and no default route (E12)
-- [ ] Capture Kali resolver output (not shown in E12)
-- [ ] Verify the Kali recovery snapshot state because E13 shows Adapter 1 as NAT while E10 shows LabNet
+- [ ] Capture Kali resolver output (not shown in E12; E18)
+- [ ] Verify the Kali recovery snapshot state because E13 shows Adapter 1 as NAT while E10 shows LabNet (E19)
 - [ ] Complete isolation review documented
 
 ## 7. Evidence Checklist

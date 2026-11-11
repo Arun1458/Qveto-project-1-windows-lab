@@ -2,7 +2,7 @@
 
 Project: Windows Exploitation & Privilege Escalation Lab  
 Evidence date: 18-10-2026
-Documentation status reviewed: 31-10-2026
+Documentation status reviewed: 11-11-2026
 Prepared by: dhruv-sain-hub
 
 ## 1. Purpose
@@ -63,7 +63,7 @@ Subnet: 10.10.10.0/24
 | Network attachment | Internal Network |
 | Network name | LabNet |
 | Default gateway | None intended; Windows capture shows no IPv4 default route |
-| DNS | None intended; Windows capture shows three IPv6 link-local DNS entries requiring clarification |
+| DNS | None intended; Windows capture lists three values in deprecated IPv6 site-local range `fec0::/10`, whose active/configured status needs verification |
 | DHCP | Not configured |
 
 ## 6. Isolation Design
@@ -77,9 +77,10 @@ The lab should not be considered fully isolated until all enabled adapters, rout
 - Windows-to-Kali ping: Successful, 0% packet loss.
 - Kali-to-Windows ping: Successful, 0% packet loss after enabling the relevant Windows inbound ICMPv4 Echo Request rule.
 - E09–E10 show Adapter 1 on LabNet and Adapters 2–4 disabled on both VMs.
-- E11 shows no Windows IPv4 default route, but lists three IPv6 DNS server entries. E12 shows Kali's connected route and no default route; Kali resolver output remains unverified.
-- E13 confirms the named snapshots exist; the Kali snapshot details display Adapter 1 as NAT, so verify the relevant snapshot state before using it for lab recovery.
-- E12/E16 show Kali's address after restart. E14 records guest OS versions. E15 shows Defender and firewall status, but not Windows Update status.
+- E11 shows no Windows IPv4 default route, but lists three DNS values in `fec0::/10`; determine whether they are configured or fallback values (E17). E12 shows Kali's connected route and no default route; Kali resolver output remains unverified (E18).
+- E13 confirms the named snapshots exist; the Kali snapshot details display Adapter 1 as NAT, so verify the selected snapshot states before using them for lab recovery (E19).
+- E12/E16 show Kali's address after restart. E14 records guest OS versions. E15 shows Defender and firewall status, but not real-time protection. Windows Update was previously recorded as up to date in branch history; reconfirm both current statuses (E20–E21).
+- The exact host OS version is not recorded (E22).
 
 ## 8. Recovery
 

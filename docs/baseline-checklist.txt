@@ -2,7 +2,7 @@
 
 Project: Windows Exploitation & Privilege Escalation Lab
 Evidence date: 18 October 2026
-Documentation status reviewed: 31 October 2026
+Documentation status reviewed: 11 November 2026
 
 `[x]` means documented in the current repository. `[ ]` means not yet verified or not supported by committed evidence. A recorded value is not the same as an independently verified state.
 
@@ -21,14 +21,16 @@ Documentation status reviewed: 31 October 2026
 - [x] Windows and Kali snapshot names are visible in VirtualBox (E13).
 - [x] Windows and Kali guest OS versions are recorded (E14).
 - [x] Windows Security shows no current threats and firewall on for all profiles; Public is active (E15).
+- [x] Windows Update was previously recorded as “Up to date” in the branch history.
 
 ## Pending verification
 
-- [ ] Resolve the three IPv6 DNS server entries shown for Windows Ethernet in E11; the design currently expects no DNS on the lab interface.
-- [ ] Add Kali resolver output; E12 shows its address and connected route, but not DNS/resolver configuration.
-- [ ] Reconcile the Kali snapshot details showing Adapter 1 as NAT with the current `LabNet` setting in E10; verify which snapshot state is appropriate for recovery (E13).
-- [ ] Record Windows Update status; it is not shown in E15.
-- [ ] Record the exact host OS version; E14 records guest OS versions only.
+- [ ] Determine whether the three Windows DNS entries in deprecated IPv6 site-local range `fec0::/10` are configured or fallback values; the design expects no DNS on the lab interface (E17).
+- [ ] Add Kali resolver output; E12 shows its address and connected route, but not DNS/resolver configuration (E18).
+- [ ] Reconcile the Kali snapshot details showing Adapter 1 as NAT with the current `LabNet` setting in E10; verify which snapshot state is appropriate for recovery (E19).
+- [ ] Reconfirm the current Windows Update status and capture supporting evidence; E15 does not show it (E20).
+- [ ] Verify and capture Defender real-time protection status; E15 does not show it (E21).
+- [ ] Record the exact host OS version; E14 records guest OS versions only (E22).
 - [ ] Complete and document the isolation review after resolving the DNS and snapshot discrepancies.
 
 ## Documentation

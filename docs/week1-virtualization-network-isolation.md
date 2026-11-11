@@ -3,7 +3,7 @@
 **Project:** Windows Exploitation & Privilege Escalation Lab
 **Prepared by:** dhruv-sain-hub
 **Evidence date:** 18 October 2026
-**Documentation status reviewed:** 31 October 2026
+**Documentation status reviewed:** 11 November 2026
 **Virtualization platform:** Oracle VirtualBox 7.2.20
 
 ## 1. Objective
@@ -139,17 +139,19 @@ See [`evidence/README.md`](../evidence/README.md) for the evidence index and out
 
 ## 10. Outstanding Work
 
-- [ ] Record the exact host OS version; guest versions are recorded in E14.
+- [ ] Record the exact host OS version; guest versions are recorded in E14 (E22).
 - [x] Review enabled/disabled status and attachment for Adapters 1–4 on both VMs (E09–E10).
-- [ ] Resolve the Windows IPv6 DNS entries and capture Kali resolver settings (E11–E12).
-- [x] Confirm the named snapshots exist; verify the Kali snapshot’s NAT detail before relying on it for isolated recovery (E13).
-- [ ] Record Windows Update status (E15 shows Defender and firewall status only).
+- [ ] Determine whether Windows' `fec0::/10` DNS values are configured or fallback values (E17), and capture Kali resolver settings (E18).
+- [x] Confirm the named snapshots exist; verify the Kali snapshot’s NAT detail before relying on it for isolated recovery (E13, E19).
+- [x] Record the previously reported Windows Update status (“Up to date” in the branch history).
+- [ ] Reconfirm the current Windows Update status and capture evidence; E15 shows Defender and firewall only (E20).
+- [ ] Capture Defender real-time protection status; E15 does not show it (E21).
 - [x] Capture and index the current configuration, connectivity, and baseline evidence (E01–E16); open items are listed in `evidence/README.md`.
 
 ## 11. Conclusion
 
 The Windows and Kali VMs have been configured on the same VirtualBox Internal Network and successfully exchanged ICMP echo traffic in both directions. The relevant Windows inbound ping rule was enabled to allow the reverse test.
 
-The documented setup and bidirectional ICMP validation are complete for this report. E09–E10 show the current VirtualBox adapter configuration; E11–E12 and E16 add guest network evidence, and E13–E15 add snapshot, OS, and partial Windows security evidence. Windows has IPv6 DNS entries despite the design’s no-DNS intention, Kali resolver output is missing, and the Kali snapshot details show NAT. Windows Update and the exact host OS version are also undocumented. Do not treat this report as confirmation of complete isolation until these items are resolved.
+The documented setup and bidirectional ICMP validation are complete for this report. E09–E10 show the current VirtualBox adapter configuration; E11–E12 and E16 add guest network evidence, and E13–E15 add snapshot, OS, and partial Windows security evidence. E11 lists DNS values in the deprecated `fec0::/10` IPv6 site-local range; their configured or fallback status needs verification. Kali resolver output is missing, and the Kali snapshot details show NAT. Windows Update was previously recorded as up to date but needs current evidence; Defender real-time status and the exact host OS version are undocumented. Do not treat this report as confirmation of complete isolation until these items are resolved.
 
 End of report.

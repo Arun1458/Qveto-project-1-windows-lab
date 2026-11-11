@@ -59,7 +59,7 @@ The lab network uses a VirtualBox Internal Network named `LabNet` with the inten
 | Windows 11 | `10.10.10.20/24`  | `255.255.255.0` |
 | Kali Linux | `10.10.10.10/24`  | `255.255.255.0` |
 
-The intended configuration has no default gateway or DNS server on the lab interfaces. E11 shows no IPv4 default gateway on Windows, but it also shows three IPv6 link-local DNS server entries; their origin needs clarification. E12 shows Kali's persistent address and connected subnet route with no default route; resolver output is still needed.
+The intended configuration has no default gateway or DNS server on the lab interfaces. E11 shows no IPv4 default gateway on Windows, but lists three DNS values in deprecated IPv6 site-local range `fec0::/10`; their configured or fallback status needs clarification. E12 shows Kali's persistent address and connected subnet route with no default route; resolver output is still needed.
 
 Both VMs have been configured to use `LabNet`, and connectivity between them has been tested successfully. A complete isolation review—including checking all VM adapters and routing configuration—remains necessary before claiming that the environment has been fully verified as isolated.
 
@@ -78,9 +78,10 @@ Both VMs have been configured to use `LabNet`, and connectivity between them has
 
 ### Pending verification
 
-- Resolve the IPv6 DNS entries shown on the Windows lab interface and capture Kali resolver details.
-- Reconcile the Kali snapshot details showing Adapter 1 as NAT with the current `LabNet` configuration before relying on that snapshot for recovery.
-- Record Windows Update status and the host OS version.
+- Determine whether Windows' `fec0::/10` DNS entries are configured or fallback values; capture Kali resolver details (E17–E18).
+- Reconcile the Kali snapshot details showing Adapter 1 as NAT with the current `LabNet` configuration before relying on that snapshot for recovery (E19).
+- Reconfirm Windows Update and Defender real-time protection status; capture supporting evidence (E20–E21).
+- Record the host OS version/build (E22).
 
 ## Evidence
 
@@ -98,4 +99,4 @@ See [`evidence/README.md`](evidence/README.md) for the screenshots currently com
 
 ---
 
-**Current status (31 October 2026):** The repository includes screenshots documenting successful bidirectional ping tests, all VM adapter states, the guest OS versions, named snapshots, Kali's post-restart address, and parts of the Windows security status. Review findings and open items are tracked in [`evidence/README.md`](evidence/README.md) and the baseline checklist. Windows shows IPv6 DNS entries contrary to the design, and the Kali snapshot details show NAT while the current VM adapter is on LabNet. Complete isolation has not been confirmed. This Week 1 branch documents setup and connectivity; future controlled security exercises are outside its completed scope.
+**Documentation status reviewed (11 November 2026):** The repository includes screenshots documenting successful bidirectional ping tests, all VM adapter states, the guest OS versions, named snapshots, Kali's post-restart address, and parts of the Windows security status. Review findings and open items are tracked in [`evidence/README.md`](evidence/README.md) and the baseline checklist. Windows output lists DNS values in deprecated IPv6 site-local space whose active/configured status remains to be checked; Kali snapshot details show NAT while the current VM adapter is on LabNet. Complete isolation has not been confirmed. This Week 1 branch documents setup and connectivity; future controlled security exercises are outside its completed scope. Evidence was captured between 18 and 31 October 2026.
